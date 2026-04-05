@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growwbee Web Solutions | High-Converting Websites & Design</title>
+    <meta name="description" content="Empowering Gyms, Salons, Real Estate, and Clinics with premium website design and marketing assets.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --black: #0f0f0f;
+            --dark-gray: #1a1a1a;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--black); color: white; scroll-behavior: smooth; }
+        
+        .gold-text { color: var(--gold); }
+        .gold-bg { background-color: var(--gold); }
+        .gold-border { border-color: var(--gold); }
+        
+        .btn-gold {
+            background: var(--gold);
+            color: var(--black);
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            background: white;
+        }
+
+        /* Hero Slider Overlay */
+        .swiper-slide { position: relative; height: 80vh; min-height: 500px; }
+        .slide-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(30%); }
+        .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; z-index: 10; }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); }
+        }
+
+        .service-card:hover { border-color: var(--gold); background: var(--dark-gray); }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-[100] glass border-b border-white/10 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                GROWW<span class="gold-text">BEE</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#services" class="hover:text-[#d4af37] transition">Services</a>
+                <a href="#pricing" class="hover:text-[#d4af37] transition">Pricing</a>
+                <a href="#portfolio" class="hover:text-[#d4af37] transition">Work</a>
+                <a href="#contact" class="hover:text-[#d4af37] transition">Contact</a>
+            </div>
+            <a href="tel:+918300808296" class="btn-gold px-6 py-2 rounded-full text-sm">Call Now</a>
+        </div>
+    </nav>
+
+    <div class="swiper mySwiper pt-16">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" class="slide-img" alt="Digital Agency">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80" class="slide-img" alt="Office Space">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80" class="slide-img" alt="Business Growth">
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="hero-content text-center">
+            <h1 class="text-4xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+                Grow Your Business with <br>
+                <span class="gold-text">High-Converting Websites 🚀</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Custom web solutions for Gyms, Salons, Real Estate, and Local Shops. We don't just build websites; we build growth engines.
+            </p>
+           <li><i class="fas fa-map-marker-alt gold-text mr-2"></i> Coimbatore, Tamil Nadu</li></br>
+            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#pricing" class="btn-gold px-10 py-4 rounded-xl text-lg">Get Started</a>
+                <a href="https://wa.me/918300808296" class="bg-white/10 hover:bg-white/20 border border-white/20 px-10 py-4 rounded-xl text-lg transition flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2 text-green-500"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-24 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Our <span class="gold-text">Expertise</span></h2>
+            <div class="h-1 w-20 gold-bg mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="service-card p-10 border border-white/10 rounded-2xl transition duration-500" data-aos="fade-up">
+                <i class="fas fa-laptop-code text-5xl gold-text mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Website Design</h3>
+                <p class="text-gray-400">Premium multi-page websites that build authority and trust for your brand.</p>
+            </div>
+            <div class="service-card p-10 border border-white/10 rounded-2xl transition duration-500" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-rocket text-5xl gold-text mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Landing Pages</h3>
+                <p class="text-gray-400">Focus on conversions with lightning-fast landing pages tailored for your ads.</p>
+            </div>
+            <div class="service-card p-10 border border-white/10 rounded-2xl transition duration-500" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-palette text-5xl gold-text mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Poster Design</h3>
+                <p class="text-gray-400">High-impact social media posters and marketing material for daily engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-xl mx-auto bg-gradient-to-b from-[#1a1a1a] to-black border-2 gold-border rounded-3xl p-8 md:p-12 text-center relative overflow-hidden" data-aos="zoom-in">
+                <div class="absolute top-0 right-0 gold-bg text-black px-8 py-2 font-bold transform rotate-45 translate-x-8 translate-y-4">BEST SELLER</div>
+                <h3 class="text-2xl font-bold mb-2">Growth Booster Package</h3>
+                <div class="text-5xl font-bold my-6 gold-text">₹4,999 <span class="text-sm text-gray-400">/one-time</span></div>
+                <ul class="text-left space-y-4 mb-10 text-gray-300">
+                    <li><i class="fas fa-check gold-text mr-3"></i> Premium Landing Page</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> 100% Mobile Responsive</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> WhatsApp Button Integration</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> Basic SEO Setup</li>
+                    <li><i class="fas fa-check gold-text mr-3"></i> Fast 3-Day Delivery</li>
+                </ul>
+                <a href="https://wa.me/918300808296?text=I%20want%20the%204999%20Package" class="btn-gold block w-full py-4 rounded-xl text-xl">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-8">Why Businesses Trust <span class="gold-text">Growwbee</span></h2>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="gold-bg p-3 rounded-lg mr-4"><i class="fas fa-bolt text-black"></i></div>
+                        <div><h4 class="font-bold text-xl">Lightning Fast Delivery</h4><p class="text-gray-400">Get your site live in record time.</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="gold-bg p-3 rounded-lg mr-4"><i class="fas fa-mobile-alt text-black"></i></div>
+                        <div><h4 class="font-bold text-xl">Mobile-First Approach</h4><p class="text-gray-400">90% of your users are on mobile; we optimize for them.</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="gold-bg p-3 rounded-lg mr-4"><i class="fas fa-piggy-bank text-black"></i></div>
+                        <div><h4 class="font-bold text-xl">Affordable Luxury</h4><p class="text-gray-400">Premium designs at prices small businesses can afford.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                <div class="bg-gray-900 p-8 rounded-2xl text-center"><h2 class="text-4xl font-bold gold-text">150+</h2><p>Projects Done</p></div>
+                <div class="bg-gray-900 p-8 rounded-2xl text-center mt-8"><h2 class="text-4xl font-bold gold-text">98%</h2><p>Happy Clients</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Our <span class="gold-text">Portfolio</span></h2>
+                <p class="text-gray-400">Real projects for real growth.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative overflow-hidden rounded-xl" data-aos="flip-left">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <h4 class="text-xl font-bold mb-2">Fitness Hub</h4>
+                        <button class="btn-gold px-4 py-1 rounded text-sm">View Demo</button>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl" data-aos="flip-left" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <h4 class="text-xl font-bold mb-2">Glow Salon</h4>
+                        <button class="btn-gold px-4 py-1 rounded text-sm">View Demo</button>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <h4 class="text-xl font-bold mb-2">Prime Estates</h4>
+                        <button class="btn-gold px-4 py-1 rounded text-sm">View Demo</button>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl" data-aos="flip-left" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <h4 class="text-xl font-bold mb-2">City Clinic</h4>
+                        <button class="btn-gold px-4 py-1 rounded text-sm">View Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold">What Our <span class="gold-text">Clients Say</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white/5 p-8 rounded-2xl italic border-l-4 gold-border">
+                "Growwbee doubled my salon bookings in just one month. Their landing page design is simply brilliant!"
+                <p class="mt-4 font-bold not-italic text-white">— Priya Sharma, Glow Salon</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-2xl italic border-l-4 gold-border">
+                "Professional, fast, and very creative. They understood exactly what my real estate agency needed."
+                <p class="mt-4 font-bold not-italic text-white">— Rahul Verma, Prime Estates</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-2xl italic border-l-4 gold-border">
+                "The ₹4999 package is the best investment I've made for my clinic. Highly recommended!"
+                <p class="mt-4 font-bold not-italic text-white">— Dr. Amit, City Clinic</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-[#d4af37] to-[#b8952e] text-black text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Grow Your Business?</h2>
+        <p class="text-xl mb-10 font-medium">Let's build your digital presence today.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <a href="tel:+918300808296" class="bg-black text-white px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-800 transition">Call Now</a>
+            <a href="https://wa.me/918300808296" class="bg-white text-black px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition">WhatsApp Now</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 bg-black border-t border-white/10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <div class="text-2xl font-bold mb-6 italic">GROWW<span class="gold-text">BEE</span></div>
+                <p class="text-gray-400">Premium digital solutions for small businesses to dominate the local market.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                <ul class="text-gray-400 space-y-3">
+                    <li><a href="#services" class="hover:text-[#d4af37]">Services</a></li>
+                    <li><a href="#pricing" class="hover:text-[#d4af37]">Pricing</a></li>
+                    <li><a href="#portfolio" class="hover:text-[#d4af37]">Portfolio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+                <ul class="text-gray-400 space-y-3">
+                    <li><i class="fas fa-phone gold-text mr-2"></i> +91 83008 08296</li>
+                    <li><i class="fas fa-envelope gold-text mr-2"></i> hello@growwbee.com</li>
+                    <li><i class="fas fa-map-marker-alt gold-text mr-2"></i> Coimbatore, Tamil Nadu</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Follow Us</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="hover:text-[#d4af37]"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-[#d4af37]"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-[#d4af37]"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-16 text-gray-600 border-t border-white/5 pt-8">
+            &copy; 2026 Growwbee Web Solutions. All rights reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918300808296?text=Hello%20Growwbee%21%20I%20want%20to%20know%20more%20about%20your%20services." class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true });
+
+        // Initialize Swiper Hero Slider
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            effect: "fade",
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
