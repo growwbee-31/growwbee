@@ -3,726 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONLINEBOSS | Premium Indian Grocery</title>
+    <title>Growwbee | Professional Web Design Coimbatore | Website at ₹4999</title>
+    <meta name="description" content="Get an SEO-friendly, mobile-responsive website for just ₹4999 in Coimbatore. Growwbee offers free domain, hosting, and WhatsApp integration for small businesses.">
+    <meta name="keywords" content="web design coimbatore, website development ₹4999, affordable web designer india, growwbee digital, business website startup">
+    <meta name="author" content="Growwbee Digital">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://growwbee.com/">
+    <meta property="og:title" content="Professional Websites for ₹4999 | Growwbee Coimbatore">
+    <meta property="og:description" content="Launch your business online with a premium website. Includes free domain and hosting.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Growwbee Digital",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "@id": "",
+      "url": "https://growwbee.com",
+      "telephone": "+918300808296",
+      "priceRange": "INR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Coimbatore",
+        "addressLocality": "Coimbatore",
+        "addressRegion": "TN",
+        "postalCode": "641001",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        :root { --primary: #16a34a; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; color: #1e293b; }
-        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); }
-        .sidebar { transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(-100%); }
-        .sidebar.active { transform: translateX(0); }
-        .page-section { animation: fadeIn 0.4s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .category-pill { transition: 0.3s; cursor: pointer; white-space: nowrap; }
-        .category-pill:hover { background: #16a34a; color: white; }
-        .category-pill.active { background: #16a34a; color: white; }
-        ::-webkit-scrollbar { height: 4px; width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 10px; }
+        body { font-family: 'Inter', sans-serif; background: #05010d; color: white; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; }
+        .gradient-bg { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); background-attachment: fixed; }
+        .neon-text { text-shadow: 0 0 10px rgba(168, 85, 247, 0.5); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .animate-float { animation: float 5s ease-in-out infinite; }
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(139, 92, 246, 0.6); transform: scale(1.05); }
+        .gradient-border { border: 2px solid transparent; background: linear-gradient(#0f0c29, #0f0c29) padding-box, linear-gradient(to right, #8b5cf6, #d946ef) border-box; }
+        [x-cloak] { display: none !important; }
     </style>
 </head>
-<body>
+<body class="gradient-bg">
 
-    <div id="sideNav" class="sidebar fixed inset-y-0 left-0 w-72 bg-white shadow-2xl z-50 p-6 overflow-y-auto">
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="text-xl font-bold text-green-600 tracking-tighter">ONLINEBOSS</h2>
-            <button onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+    <header class="fixed w-full top-0 z-50 glass border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font- bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+            Growwbee
         </div>
-        <nav class="flex flex-col gap-2">
-            <a href="#" onclick="showPage('userView'); toggleMenu()" class="font-black text-slate-900 py-2 border-b">Fresh Store</a>
-            <a href="#" onclick="showPage('cartView'); toggleMenu()" class="font-medium text-slate-600 py-2 border-b">My Basket</a>
-            <a href="#" id="adminSideLink" onclick="showPage('adminView'); toggleMenu()" class="hidden font-medium text-red-600 py-2 border-b">Admin Console</a>
-            
-            <div class="mt-6 mb-2">
-                <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">Shop Categories</p>
-                <div class="flex flex-col gap-1">
-                    <button onclick="filterCategory('All', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">All Items</button>
-                    <button onclick="filterCategory('Oils', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Oils</button>
-                    <button onclick="filterCategory('Fruits', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Fruits</button>
-                    <button onclick="filterCategory('Veggies', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Veggies</button>
-                    <button onclick="filterCategory('Juices', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Juices</button>
-                    <button onclick="filterCategory('Detergents', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Detergents</button>
-                    <button onclick="filterCategory('Rice', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Rice</button>
-                    <button onclick="filterCategory('Snacks & Namkeens', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Snacks & Namkeens</button>
-                    <button onclick="filterCategory('Beverages', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Beverages</button>
-                    <button onclick="filterCategory('Ready to Cook', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Ready to Cook</button>
-                    <button onclick="filterCategory('Crockeries', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Crockeries</button>
-                    <button onclick="filterCategory('Chilled & Dairy Foods', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Chilled & Dairy Foods</button>
-                    <button onclick="filterCategory('Baby Care', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Baby Care</button>
-                    <button onclick="filterCategory('Feminine Care', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Feminine Care</button>
-                    <button onclick="filterCategory('Health Care', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Health Care</button>
-                    <button onclick="filterCategory('Personal Care', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Personal Care</button>
-                    <button onclick="filterCategory('Skin Care', this); toggleMenu()" class="text-left px-4 py-3 rounded-xl hover:bg-green-50 font-bold text-sm transition">Skin Care</button>
-                </div>
-            </div>
-
-            <hr class="my-6">
-            <button id="sideLoginBtn" onclick="showLogin(); toggleMenu()" class="w-full bg-green-600 text-white py-4 rounded-xl font-black shadow-lg shadow-green-100">Login / Register</button>
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#features" class="hover:text-purple-400 transition">Features</a>
+            <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
+            <a href="#portfolio" class="hover:text-purple-400 transition">Portfolio</a>
+            <a href="#faq" class="hover:text-purple-400 transition">FAQ</a>
         </nav>
-    </div>
-
-    <header class="glass sticky top-0 z-40 border-b border-gray-100">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <button onclick="toggleMenu()" class="lg:hidden text-xl"><i class="fas fa-bars"></i></button>
-                <h1 class="text-2xl font-black tracking-tighter cursor-pointer text-slate-900" onclick="showPage('userView')">ONLINE<span class="text-green-600">BOSS</span></h1>
-            </div>
-
-            <div class="flex items-center gap-6">
-                <nav class="hidden lg:flex gap-8 text-sm font-bold uppercase tracking-wider">
-                    <a href="#" onclick="showPage('userView')" class="hover:text-green-600">Home</a>
-                    <a href="#" id="adminLink" onclick="showPage('adminView')" class="hidden text-red-600 border-b-2 border-red-600">Admin Console</a>
-                </nav>
-                <div class="flex items-center gap-5">
-                    
-                    <!-- Profile / Login Section -->
-                    <div class="relative" id="profileContainer">
-                        <button id="loginBtn" onclick="showLogin()" class="text-xs font-bold hover:text-green-600 tracking-widest uppercase">LOGIN</button>
-                        
-                        <!-- Dropdown Menu -->
-                        <div id="profileDropdown" class="hidden absolute right-0 mt-3 w-64 bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-6 z-50">
-                            <div class="flex flex-col items-center text-center border-b pb-4 mb-4">
-                                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl mb-2">
-                                    <i class="fas fa-user-circle"></i>
-                                </div>
-                                <h4 id="profileName" class="font-black text-sm text-slate-800 truncate w-full">User Name</h4>
-                                <p id="profileEmail" class="text-[10px] text-slate-400 truncate w-full">email@example.com</p>
-                            </div>
-                            <div class="space-y-3 mb-4">
-                                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest">Recent Orders</p>
-                                <div id="miniOrderList" class="max-h-64 overflow-y-auto space-y-2 text-[11px] font-bold text-slate-600">
-                                    <!-- Dynamic content -->
-                                </div>
-                            </div>
-                            <button onclick="logout()" class="w-full bg-red-50 text-red-600 py-3 rounded-xl font-black text-[10px] hover:bg-red-100 transition">LOGOUT</button>
-                        </div>
-                    </div>
-
-                    <div class="relative cursor-pointer bg-green-600 p-2 rounded-full px-5 flex items-center gap-2 shadow-lg shadow-green-100" onclick="showPage('cartView')">
-                        <i class="fa-solid fa-basket-shopping text-white text-sm"></i>
-                        <span id="cartCount" class="font-black text-white text-sm">0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a href="tel:8300808296" class="bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-full text-sm font-bold transition btn-glow">
+            Call Now
+        </a>
     </header>
 
-    <main class="min-h-screen">
+   <main>
+    <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 text-center lg:text-left" 
+             x-data="{ visible: false }" x-init="setTimeout(() => visible = true, 100)"
+             :class="visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'" 
+             class="transition-all duration-1000">
+            <span class="bg-purple-500/20 text-purple-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-purple-500/30">
+                Limited Offer: ₹4999 Only
+            </span>
+            <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                Grow Your Business Online with <span class="text-purple-500">Stunning Websites</span>
+            </h1>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                SEO-friendly, mobile-responsive, lightning-fast websites with free domain, hosting, and WhatsApp booking integration. Best web design startup in Coimbatore.
+            </p>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+                <a href="#pricing" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-xl font-bold btn-glow transition">
+                    Get My Website Now
+                </a>
+                <a href="https://wa.me/918300808296" target="_blank" rel="noopener" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-green-500 text-xl"></i> Chat on WhatsApp
+                </a>
+            </div>
+            <p class="text-sm text-gray-500">
+                <i class="fas fa-check-circle text-purple-500 mr-2"></i> Serving businesses in Coimbatore & across India.
+            </p>
+        </div>
         
-        <section id="userView" class="page-section">
-            <div class="container mx-auto px-4 py-6">
-                <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden mb-10">
-                    <div class="relative z-10 max-w-xl">
-                        <span class="bg-green-600 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Authentic Indian Groceries</span>
-                        <h2 class="text-4xl md:text-6xl font-black mt-6 leading-tight">ONLINE BOSS <br><span class="text-green-500">OILS & Grocery</span></h2>
-                        <p class="mt-4 text-sm md:text-base text-slate-200 max-w-xl font-semibold">Pure Quality Oils | Home Delivery</p>
-                        <p class="mt-4 text-sm text-slate-300">Delivery : Sundharapuram | Podanur | Coimbatore</p>
-                        <p class="mt-2 text-sm text-slate-300">24/7 customer care: <span class="font-black">94871 04731</span></p>
-                        <button onclick="document.getElementById('explore').scrollIntoView({behavior: 'smooth'})" class="mt-8 bg-green-600 text-white px-10 py-4 rounded-2xl font-black shadow-2xl hover:bg-green-50 transition-all">Start Shopping</button>
-                    </div>
-                </div>
-
-                <div class="flex gap-3 overflow-x-auto pb-4 mb-10 scroll-smooth" id="categoryBar">
-                    <div class="category-pill active bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('All', this)">All</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Oils', this)">Oils</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Fruits', this)">Fruits</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Veggies', this)">Veggies</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Juices', this)">Juices</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Detergents', this)">Detergents</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Rice', this)">Rice</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Snacks & Namkeens', this)">Snacks & Namkeens</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Beverages', this)">Beverages</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Ready to Cook', this)">Ready to Cook</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Crockeries', this)">Crockeries</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Chilled & Dairy Foods', this)">Chilled & Dairy Foods</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Baby Care', this)">Baby Care</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Feminine Care', this)">Feminine Care</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Health Care', this)">Health Care</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Personal Care', this)">Personal Care</div>
-                    <div class="category-pill bg-white px-8 py-3 rounded-2xl shadow-sm border border-gray-100 font-bold text-sm" onclick="filterCategory('Skin Care', this)">Skin Care</div>
-                </div>
-
-                <div id="explore" class="mb-8"><h3 class="text-2xl font-black text-slate-800">Fresh Stock</h3></div>
-                <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6"></div>
-
-                <div class="flex justify-center items-center gap-4 mt-12 py-8">
-                    <button onclick="changePage(-1)" id="prevBtn" class="bg-white border border-gray-200 px-6 py-3 rounded-2xl font-bold disabled:opacity-20">Prev</button>
-                    <span id="pageNumber" class="font-black">Page 1</span>
-                    <button onclick="changePage(1)" id="nextBtn" class="bg-white border border-gray-200 px-6 py-3 rounded-2xl font-bold disabled:opacity-20">Next</button>
-                </div>
+        <div class="lg:w-1/2 relative animate-float">
+            <div class="relative z-10 glass p-2 rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Professional Web Design Portfolio" class="rounded-xl shadow-2xl">
             </div>
-        </section>
+            <div class="absolute -bottom-10 -right-5 z-20 w-48 glass p-2 rounded-xl hidden md:block">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400" alt="Mobile Responsive Website Preview" class="rounded-lg">
+            </div>
+            <div class="absolute -top-10 -left-10 w-64 h-64 bg-purple-600/20 blur-[100px] rounded-full"></div>
+        </div>
+    </section>
 
-        <section id="cartView" class="page-section hidden container mx-auto px-4 py-10">
-            <h2 class="text-3xl font-black mb-10">Your Basket</h2>
-            <div class="flex flex-col lg:flex-row gap-10">
-                <div id="cartItems" class="flex-1 space-y-4"></div>
-                <div class="lg:w-96">
-                    <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 sticky top-24">
-                        <h3 class="font-black text-lg mb-6">Summary</h3>
-                        <div class="flex justify-between mb-3 text-slate-500"><span>Basket Value</span><span id="cartTotal" class="font-bold text-slate-900">₹0</span></div>
-                        <button onclick="handleCheckoutStep()" class="w-full bg-slate-900 text-white py-5 rounded-2xl font-black mt-6 hover:bg-green-600 transition">Checkout</button>
-                    </div>
+    <section id="features" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Everything You Need to Succeed</h2>
+            <p class="text-gray-400">High-end features included in every single package.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-600 transition">
+                    <i class="fas fa-search-dollar text-purple-400 group-hover:text-white"></i>
                 </div>
+                <h3 class="text-xl font-bold mb-3">SEO Optimized</h3>
+                <p class="text-gray-400 text-sm">Be found on Google. We build your site with search engines in mind from day one.</p>
             </div>
-        </section>
-
-        <section id="checkoutView" class="page-section hidden max-w-2xl mx-auto py-10 px-4">
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl">
-                <h2 class="text-2xl font-black mb-8">Delivery Information</h2>
-                <form id="orderForm" onsubmit="processFinalOrder(event)" class="space-y-4">
-                    <input type="text" id="custName" placeholder="Full Name" required class="w-full p-4 bg-gray-50 border rounded-2xl outline-none focus:border-green-600">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="tel" id="custPhone" placeholder="Mobile Number" required class="w-full p-4 bg-gray-50 border rounded-2xl outline-none focus:border-green-600">
-                        <input type="text" id="custPin" placeholder="Pincode" required class="w-full p-4 bg-gray-50 border rounded-2xl outline-none focus:border-green-600">
-                    </div>
-                    <textarea id="custAddress" placeholder="Full Address" required class="w-full p-4 bg-gray-50 border rounded-2xl h-28 outline-none focus:border-green-600"></textarea>
-                    
-                    <h3 class="font-black pt-6 pb-2 text-lg">Select Payment</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <label class="border-2 p-5 rounded-2xl cursor-pointer text-center has-[:checked]:border-green-600 has-[:checked]:bg-green-50">
-                            <input type="radio" name="payMethod" value="COD" checked class="hidden" onclick="toggleUPIDisplay(false)">
-                            <div class="font-black text-[10px] uppercase">Cash on Delivery</div>
-                        </label>
-                        <label class="border-2 p-5 rounded-2xl cursor-pointer text-center has-[:checked]:border-green-600 has-[:checked]:bg-green-50">
-                            <input type="radio" name="payMethod" value="UPI" class="hidden" onclick="toggleUPIDisplay(true)">
-                            <div class="font-black text-[10px] uppercase">UPI Payment</div>
-                        </label>
-                    </div>
-                    <div id="upiInputBox" class="hidden mt-4">
-                        <input type="text" id="upiId" placeholder="Enter UPI ID (e.g. boss@upi)" class="w-full p-4 bg-green-50 border border-green-200 rounded-2xl font-bold outline-none">
-                    </div>
-                    <button type="submit" class="w-full bg-green-600 text-white py-5 rounded-2xl font-black shadow-2xl mt-8 hover:scale-[1.02] transition">Place Order Now</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="adminView" class="page-section hidden container mx-auto px-4 py-10">
-            <div class="flex justify-between items-center mb-10">
-                <h2 class="text-3xl font-black">ONLINEBOSS Admin</h2>
-                <button onclick="logout()" class="bg-red-50 text-red-600 px-6 py-2 rounded-xl font-bold">Log Out</button>
-            </div>
-            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10">
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border">
-                    <h3 id="adminFormTitle" class="text-xl font-black mb-6">Manage Inventory</h3>
-                    <form id="productForm" onsubmit="handleProductSubmit(event)" class="space-y-4">
-                        <input type="hidden" id="editId">
-                        <input type="text" id="pName" placeholder="Product Title" required class="w-full p-4 bg-gray-50 rounded-xl">
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="number" id="pPrice" placeholder="Price (₹)" required class="w-full p-4 bg-gray-50 rounded-xl">
-                            <select id="pCat" class="w-full p-4 bg-gray-50 rounded-xl font-bold">
-                                <option>Oils</option>
-                                <option>Fruits</option>
-                                <option>Veggies</option>
-                                <option>Juices</option>
-                                <option>Detergents</option>
-                                <option>Rice</option>
-                                <option>Snacks & Namkeens</option>
-                                <option>Beverages</option>
-                                <option>Ready to Cook</option>
-                                <option>Crockeries</option>
-                                <option>Chilled & Dairy Foods</option>
-                                <option>Baby Care</option>
-                                <option>Feminine Care</option>
-                                <option>Health Care</option>
-                                <option>Personal Care</option>
-                                <option>Skin Care</option>
-                            </select>
-                        </div>
-                        <input type="text" id="pImg" placeholder="Direct Image Link" required class="w-full p-4 bg-gray-50 rounded-xl">
-                        <textarea id="pDesc" placeholder="Weight Info (e.g. 1kg)" class="w-full p-4 bg-gray-50 rounded-xl"></textarea>
-                        <div class="flex gap-3">
-                            <button id="formBtn" class="flex-1 bg-slate-900 text-white py-4 rounded-xl font-black">Save Product</button>
-                            <button type="button" id="cancelEditBtn" onclick="resetAdminForm()" class="hidden bg-gray-100 px-6 rounded-xl font-bold">Cancel</button>
-                        </div>
-                    </form>
-                    <div id="adminStockList" class="mt-10 space-y-3 max-h-[500px] overflow-y-auto pr-2"></div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition">
+                    <i class="fas fa-mobile-alt text-blue-400 group-hover:text-white"></i>
                 </div>
-
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border">
-                    <h3 class="text-xl font-black mb-6">Recent Orders</h3>
-                    <div id="adminOrderList" class="space-y-4 max-h-[1000px] overflow-y-auto pr-2"></div>
+                <h3 class="text-xl font-bold mb-3">Mobile Responsive</h3>
+                <p class="text-gray-400 text-sm">Your website will look perfect on iPhones, Androids, Tablets, and Desktops.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-pink-600 transition">
+                    <i class="fas fa-bolt text-pink-400 group-hover:text-white"></i>
                 </div>
+                <h3 class="text-xl font-bold mb-3">Lightning Fast</h3>
+                <p class="text-gray-400 text-sm">Don't lose customers to slow loading times. Our sites load in under 2 seconds.</p>
             </div>
-        </section>
-    </main>
-
-    <footer class="bg-slate-950 text-slate-200 py-10">
-        <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center gap-4">
-            <div>
-                <h2 class="text-lg font-black text-white">ONLINEBOSS</h2>
-                <p class="text-sm text-slate-400 max-w-md">Bringing premium Indian groceries to your doorstep with fast delivery, trusted quality, and local freshness.</p>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                    <i class="fab fa-whatsapp text-green-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">WhatsApp Integration</h3>
+                <p class="text-gray-400 text-sm">Direct booking and inquiries sent straight to your phone for instant conversion.</p>
             </div>
-            <div class="text-sm text-slate-400 space-y-2 text-center lg:text-right">
-                <p>© 2026 ONLINEBOSS</p>
-                <p>Support: support@onlineboss.example</p>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-yellow-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-600 transition">
+                    <i class="fas fa-globe text-yellow-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Free Domain & Hosting</h3>
+                <p class="text-gray-400 text-sm">No hidden costs. We provide your first year of domain and hosting for free.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-600 transition">
+                    <i class="fas fa-user-cog text-orange-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Easy to Manage</h3>
+                <p class="text-gray-400 text-sm">We give you a simple dashboard to update your text and images effortlessly.</p>
             </div>
         </div>
+    </section>
+
+    <section id="pricing" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">One Simple, Affordable Price</h2>
+            <div class="gradient-border rounded-3xl p-1 bg-gradient-to-br from-purple-500 to-pink-500 shadow-2xl">
+                <div class="bg-[#05010d] rounded-[22px] p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-10 right-[-35px] bg-pink-600 text-white px-12 py-1 rotate-45 text-xs font-bold uppercase">Best Seller</div>
+                    <h3 class="text-2xl font-bold mb-4">Starter Website Package</h3>
+                    <div class="flex justify-center items-baseline gap-2 mb-8">
+                        <span class="text-5xl font-extrabold text-white">₹4999</span>
+                        <span class="text-gray-500 line-through">₹9999</span>
+                    </div>
+                    <ul class="text-left space-y-4 mb-10 max-w-md mx-auto">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Free Domain Name</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Free Secure Hosting</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Map Location Integration</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> WhatsApp Chat Integration</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Fully Mobile Responsive</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Fast 48-Hour Delivery</li>
+                    </ul>
+                    <a href="https://wa.me/918300808296" class="block w-full bg-gradient-to-r from-purple-600 to-pink-600 py-4 rounded-xl font-bold text-lg btn-glow transition">
+                        Start My Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 px-6 max-w-3xl mx-auto" x-data="{ active: null }">
+        <h2 class="text-4xl font-bold text-center mb-12">Common Questions</h2>
+        <div class="space-y-4">
+            <div class="glass overflow-hidden">
+                <button @click="active = active === 1 ? null : 1" class="w-full p-6 text-left flex justify-between items-center font-bold">
+                    How long does it take?
+                    <i class="fas" :class="active === 1 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                </button>
+                <div x-show="active === 1" class="p-6 pt-0 text-gray-400 text-sm">
+                    Most websites are delivered within 48 to 72 hours once we have all your business details.
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div>
+            <h2 class="text-4xl font-bold mb-6">Let's Get Started</h2>
+            <p class="text-gray-400 mb-8 leading-relaxed">Ready to take your business to the next level? We're here to help you build your digital identity today.</p>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Call Us</p>
+                        <p class="font-bold">+91 8300808296</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Email Us</p>
+                        <p class="font-bold">growwbee@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Location</p>
+                        <p class="font-bold">Coimbatore, Tamil Nadu, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="glass p-8">
+            <form action="#" method="POST" class="space-y-4">
+                <input type="text" name="name" required placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition">
+                <input type="tel" name="phone" required placeholder="Phone Number" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition">
+                <select name="type" class="w-full bg-[#1a1a2e] border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition text-gray-400">
+                    <option disabled selected>Select Business Type</option>
+                    <option>E-commerce</option>
+                    <option>Restaurant</option>
+                    <option>Real Estate</option>
+                    <option>Other</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your business" rows="4" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition"></textarea>
+                <button type="submit" class="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-purple-500 hover:text-white transition">Get Started Now</button>
+            </form>
+        </div>
+    </section>
+   </main>
+
+    <footer class="py-12 border-t border-white/10 px-6 text-center text-gray-500 text-sm">
+        <div class="mb-6 flex justify-center gap-6 text-xl">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>© 2026 Growwbee Digital. All rights reserved. | Made with ❤️ for Small Businesses</p>
     </footer>
 
-    <a href="https://wa.me/919487104731" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-600 text-white shadow-2xl hover:bg-green-700 transition">
-        <i class="fab fa-whatsapp text-3xl"></i>
+    <a href="https://wa.me/918300808296" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 flex items-center group">
+        <span class="bg-black text-white px-4 py-2 rounded-lg text-sm mr-2 opacity-0 group-hover:opacity-100 transition shadow-lg border border-white/10">Chat with us</span>
+        <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl animate-bounce text-3xl">
+            <i class="fab fa-whatsapp"></i>
+        </div>
     </a>
 
-    <div id="productModal" class="hidden fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-center p-6">
-        <div class="bg-white rounded-[3rem] max-w-md w-full relative shadow-2xl overflow-auto max-h-[90vh]">
-            <button onclick="closeProductModal()" class="absolute top-6 right-6 text-gray-400 text-2xl z-10"><i class="fas fa-times"></i></button>
-            <div id="productModalContent" class="p-8 pt-12"></div>
-        </div>
-    </div>
-
-    <div id="loginModal" class="hidden fixed inset-0 bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-center p-6">
-        <div class="bg-white p-10 rounded-[3rem] max-w-md w-full relative shadow-2xl">
-            <button onclick="showLogin()" class="absolute top-8 right-8 text-gray-400"><i class="fas fa-times"></i></button>
-            <div id="loginSection">
-                <h2 class="text-3xl font-black mb-2">Welcome</h2>
-                <input type="email" id="loginEmail" placeholder="Email ID" class="w-full p-4 bg-gray-50 rounded-2xl mb-4">
-                <input type="password" id="loginPass" placeholder="Password" class="w-full p-4 bg-gray-50 rounded-2xl mb-6">
-                <button onclick="handleLoginAction()" class="w-full bg-green-600 text-white py-5 rounded-2xl font-black">Login</button>
-                <p class="text-center mt-8 text-sm font-bold">New Boss? <a href="#" onclick="toggleAuthMode('register')" class="text-green-600">Join Now</a></p>
-            </div>
-            <div id="registerSection" class="hidden">
-                <h2 class="text-3xl font-black mb-2">Register</h2>
-                <input type="text" id="regName" placeholder="Your Name" class="w-full p-4 bg-gray-50 rounded-2xl mb-4">
-                <input type="email" id="regEmail" placeholder="Email Address" class="w-full p-4 bg-gray-50 rounded-2xl mb-4">
-                <input type="password" id="regPass" placeholder="Password" class="w-full p-4 bg-gray-50 rounded-2xl mb-6">
-                <button onclick="handleRegisterAction()" class="w-full bg-slate-900 text-white py-5 rounded-2xl font-black">Sign Up</button>
-                <p class="text-center mt-8 text-sm font-bold text-slate-400">Already a Boss? <a href="#" onclick="toggleAuthMode('login')" class="text-green-600">Log In</a></p>
-            </div>
-        </div>
-    </div>
-
-    <script type="module">
-        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-        const URL = 'https://hqspmulzlnxzoshzstkq.supabase.co';
-        const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhxc3BtdWx6bG54em9zaHpzdGtxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4NTg5NTksImV4cCI6MjA5MzQzNDk1OX0.931PQhqvclzK1DwJNtp46sGoYxDD_Kk4bPtdINg7yi4';
-        const supabase = createClient(URL, KEY);
-
-        let products = [];
-        let filteredProducts = [];
-        let cart = [];
-        let user = null;
-        let currentPage = 1;
-        const itemsPerPage = 20;
-
-        window.toggleMenu = () => document.getElementById('sideNav').classList.toggle('active');
-        window.showLogin = () => {
-            const modal = document.getElementById('loginModal');
-            modal.classList.toggle('hidden');
-        };
-
-        window.toggleUPIDisplay = (show) => document.getElementById('upiInputBox').classList.toggle('hidden', !show);
-        window.toggleAuthMode = (mode) => {
-            document.getElementById('loginSection').classList.toggle('hidden', mode === 'register');
-            document.getElementById('registerSection').classList.toggle('hidden', mode === 'login');
-        };
-
-        window.showPage = (id) => {
-            document.querySelectorAll('.page-section').forEach(p => p.classList.add('hidden'));
-            document.getElementById(id).classList.remove('hidden');
-            if(id === 'userView') fetchProducts();
-            if(id === 'cartView') renderCart();
-            if(id === 'adminView') loadAdminDashboard();
-            window.scrollTo(0,0);
-        };
-
-        window.filterCategory = (cat, el) => {
-            document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
-            if(el && el.classList.contains('category-pill')) el.classList.add('active');
-            filteredProducts = cat === 'All' ? products : products.filter(p => p.category === cat);
-            currentPage = 1; 
-            showPage('userView');
-            renderProducts();
-            document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
-        };
-
-        // PRODUCT MANAGEMENT
-        window.handleProductSubmit = async (e) => {
-            e.preventDefault();
-            const id = document.getElementById('editId').value;
-            const pData = {
-                name: document.getElementById('pName').value,
-                price: parseInt(document.getElementById('pPrice').value),
-                category: document.getElementById('pCat').value,
-                img: document.getElementById('pImg').value,
-                description: document.getElementById('pDesc').value
-            };
-            if(id) await supabase.from('products').update(pData).eq('id', id);
-            else await supabase.from('products').insert(pData);
-            resetAdminForm(); loadAdminDashboard();
-        };
-
-        window.editProduct = (id) => {
-            const p = products.find(x => x.id == id);
-            document.getElementById('editId').value = p.id;
-            document.getElementById('pName').value = p.name;
-            document.getElementById('pPrice').value = p.price;
-            document.getElementById('pCat').value = p.category;
-            document.getElementById('pImg').value = p.img;
-            document.getElementById('pDesc').value = p.description;
-            document.getElementById('adminFormTitle').innerText = "Edit Product";
-            document.getElementById('formBtn').innerText = "Update Product";
-            document.getElementById('cancelEditBtn').classList.remove('hidden');
-        };
-
-        window.deleteProduct = async (id) => {
-            if(confirm("Delete product?")) { await supabase.from('products').delete().eq('id', id); loadAdminDashboard(); }
-        };
-
-        window.resetAdminForm = () => {
-            document.getElementById('productForm').reset();
-            document.getElementById('editId').value = "";
-            document.getElementById('adminFormTitle').innerText = "Manage Inventory";
-            document.getElementById('formBtn').innerText = "Save Product";
-            document.getElementById('cancelEditBtn').classList.add('hidden');
-        };
-
-        // --- ORDER LOGIC ---
-        window.processFinalOrder = async (e) => {
-            e.preventDefault();
-            if(cart.length === 0) return alert("Your basket is empty!");
-
-            const total = cart.reduce((a, b) => a + (b.price * b.qty), 0);
-            const payMethod = document.querySelector('input[name="payMethod"]:checked').value;
-            
-            const orderPayload = {
-                items: cart, 
-                total: total, 
-                status: 'Pending',
-                customer_info: { 
-                    name: document.getElementById('custName').value, 
-                    phone: document.getElementById('custPhone').value, 
-                    address: document.getElementById('custAddress').value,
-                    pincode: document.getElementById('custPin').value,
-                    payment_type: payMethod,
-                    user_email: user ? user.email : 'guest'
-                }
-            };
-
-            const { data, error } = await supabase.from('orders').insert([orderPayload]);
-
-            if (error) {
-                console.error("DB Error:", error.message);
-                alert("Failed to save order: " + error.message);
-            } else {
-                cart = []; 
-                document.getElementById('cartCount').innerText = '0'; 
-                alert("Order Placed Successfully!"); 
-                showPage('userView');
-            }
-        };
-
-        window.updateOrderStatus = async (orderId, newStatus, selectElement) => {
-            selectElement.disabled = true;
-            const { error } = await supabase.from('orders').update({ status: newStatus }).eq('id', orderId);
-            if (error) {
-                console.error('Update failed:', error.message);
-                alert('Failed to update order status');
-                selectElement.disabled = false;
-                loadAdminDashboard();
-                return;
-            }
-            setTimeout(() => loadAdminDashboard(), 300);
-        };
-
-        async function loadAdminDashboard() {
-            const { data: p } = await supabase.from('products').select('*').order('created_at', { ascending: false });
-            const { data: o } = await supabase.from('orders').select('*').order('created_at', { ascending: false });
-            products = p || [];
-            
-            document.getElementById('adminStockList').innerHTML = products.map(x => `
-                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                    <div class="flex items-center gap-4">
-                        <img src="${x.img}" class="w-12 h-12 rounded-xl object-cover">
-                        <div><p class="text-[10px] font-black uppercase">${x.name}</p><p class="text-[10px] text-green-600 font-bold">₹${x.price}</p></div>
-                    </div>
-                    <div class="flex gap-2">
-                        <button onclick="editProduct(${x.id})" class="p-2 text-blue-600"><i class="fas fa-edit"></i></button>
-                        <button onclick="deleteProduct(${x.id})" class="p-2 text-red-600"><i class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-            `).join('');
-            
-            document.getElementById('adminOrderList').innerHTML = (o || []).map(x => `
-                <div class="p-6 border rounded-[2rem] bg-white shadow-sm space-y-4">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <b class="text-xs text-slate-400 uppercase">ORDER #${x.id}</b>
-                            <p class="font-black text-slate-800">${x.customer_info?.name || 'Guest'}</p>
-                            <p class="text-xs font-bold text-green-600">${x.customer_info?.phone || ''}</p>
-                        </div>
-                        <select onchange="updateOrderStatus(${x.id}, this.value, this)" class="text-[10px] font-black border-2 rounded-lg px-2 py-1">
-                            <option value="Pending" ${x.status === 'Pending' ? 'selected' : ''}>Pending</option>
-                            <option value="Delivered" ${x.status === 'Delivered' ? 'selected' : ''}>Delivered</option>
-                        </select>
-                    </div>
-                    <div class="bg-slate-50 p-3 rounded-xl text-[11px] font-medium text-slate-600">
-                        ${x.items?.map(i => `${i.name} (x${i.qty})`).join(', ') || 'No items'}
-                    </div>
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-400 font-bold uppercase tracking-widest">${x.customer_info?.payment_type || 'COD'}</span>
-                        <span class="font-black text-lg text-slate-900">₹${x.total}</span>
-                    </div>
-                    <p class="text-[10px] text-slate-400 italic">${x.customer_info?.address}, ${x.customer_info?.pincode || ''}</p>
-                </div>
-            `).join('');
-        }
-
-        async function fetchProducts() {
-            const { data } = await supabase.from('products').select('*').order('created_at', { ascending: false });
-            products = data || []; filteredProducts = products; renderProducts();
-        }
-
-        function renderProducts() {
-            const grid = document.getElementById('productGrid');
-            const start = (currentPage - 1) * itemsPerPage;
-            const items = filteredProducts.slice(start, start + itemsPerPage);
-            grid.innerHTML = items.map(p => `
-                <div class="bg-white rounded-[2rem] p-4 border border-gray-50 shadow-sm group cursor-pointer" onclick="showProductModal(${p.id})">
-                    <div class="relative overflow-hidden rounded-2xl bg-gray-100">
-                        <img src="${p.img}" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="mt-4">
-                        <h4 class="font-bold text-sm h-10 line-clamp-2 text-slate-800">${p.name}</h4>
-                        <p class="text-xs text-slate-600 mt-2 line-clamp-1">${p.description || 'High quality product'}</p>
-                        <div class="flex justify-between items-center mt-3">
-                            <span class="text-lg font-black text-slate-900">₹${p.price}</span>
-                            <input type="number" id="qty-${p.id}" value="1" min="1" class="w-8 text-center bg-gray-50 rounded-lg text-xs font-bold p-1" onclick="event.stopPropagation()">
-                        </div>
-                        <button onclick="event.stopPropagation(); addToBag(${p.id})" class="w-full bg-slate-900 text-white py-3 rounded-xl text-[10px] font-black mt-4 hover:bg-green-600 transition">ADD TO BASKET</button>
-                    </div>
-                </div>
-            `).join('');
-            updatePagination();
-        }
-
-        window.changePage = (dir) => { currentPage += dir; renderProducts(); };
-        
-        window.showProductModal = (id) => {
-            const p = products.find(x => x.id === id);
-            if (!p) return;
-            const modal = document.getElementById('productModal');
-            const content = document.getElementById('productModalContent');
-            content.innerHTML = `
-                <img src="${p.img}" class="w-full h-64 object-cover rounded-2xl mb-4">
-                <h2 class="text-2xl font-black text-slate-800 mb-3">${p.name}</h2>
-                <p class="text-xs font-black uppercase text-green-600 mb-2">${p.category}</p>
-                <p class="text-sm text-slate-600 mb-4">${p.description || 'High quality product'}</p>
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-3xl font-black text-slate-900">₹${p.price}</span>
-                </div>
-                <div class="flex gap-3 mb-4">
-                    <input type="number" id="modalQty" value="1" min="1" class="flex-1 p-4 bg-gray-50 border rounded-xl text-xs font-bold">
-                    <button onclick="modalAddToBag(${p.id})" class="flex-1 bg-green-600 text-white py-4 rounded-xl font-black text-sm hover:bg-green-700 transition">Add to Basket</button>
-                </div>
-            `;
-            modal.classList.remove('hidden');
-        };
-        
-        window.closeProductModal = () => {
-            document.getElementById('productModal').classList.add('hidden');
-        };
-        
-        window.modalAddToBag = (id) => {
-            const p = products.find(x => x.id === id);
-            const qtyInput = document.getElementById('modalQty');
-            const qty = parseInt(qtyInput.value);
-            const exists = cart.find(i => i.id === id);
-            if(exists) exists.qty += qty; else cart.push({...p, qty});
-            document.getElementById('cartCount').innerText = cart.reduce((a, b) => a + b.qty, 0);
-            closeProductModal();
-        };
-        
-        function updatePagination() {
-            const total = Math.ceil(filteredProducts.length / itemsPerPage);
-            document.getElementById('prevBtn').disabled = currentPage === 1;
-            document.getElementById('nextBtn').disabled = currentPage >= total || total === 0;
-            document.getElementById('pageNumber').innerText = `Page ${currentPage} of ${total || 1}`;
-        }
-
-        window.addToBag = (id) => {
-            const p = products.find(x => x.id === id);
-            const qtyInput = document.getElementById(`qty-${id}`);
-            const qty = parseInt(qtyInput.value);
-            const exists = cart.find(i => i.id === id);
-            if(exists) exists.qty += qty; else cart.push({...p, qty});
-            document.getElementById('cartCount').innerText = cart.reduce((a, b) => a + b.qty, 0);
-        };
-
-        function renderCart() {
-            const list = document.getElementById('cartItems');
-            let total = 0;
-            if(!cart.length) { list.innerHTML = `<div class="text-center py-20 font-bold opacity-20">Basket is empty</div>`; document.getElementById('cartTotal').innerText = `₹0`; return; }
-            list.innerHTML = cart.map(i => {
-                total += (i.price * i.qty);
-                return `<div class="flex items-center gap-4 bg-white p-5 rounded-3xl shadow-sm border">
-                    <img src="${i.img}" class="w-16 h-16 object-cover rounded-xl">
-                    <div class="flex-1 font-black text-xs">${i.name} <br> <span class="text-green-600">₹${i.price} x ${i.qty}</span></div>
-                    <button onclick="removeFromCart(${i.id})" class="text-red-400 p-2"><i class="fas fa-trash"></i></button>
-                </div>`;
-            }).join('');
-            document.getElementById('cartTotal').innerText = `₹${total}`;
-        }
-
-        window.removeFromCart = (id) => { cart = cart.filter(x => x.id !== id); renderCart(); document.getElementById('cartCount').innerText = cart.reduce((a,b)=>a+b.qty,0); };
-        window.handleCheckoutStep = () => { if(!user) return showLogin(); if(!cart.length) return alert("Empty basket"); showPage('checkoutView'); };
-
-        window.handleLoginAction = async () => {
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPass').value;
-
-            if (email === 'admin@gmail.com' && password === '12345') {
-                user = { role: 'admin', email, name: 'Main Admin' };
-                await updateAuthUI();
-                showLogin();
-                return showPage('adminView');
-            }
-
-            const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-            if (error) return alert(error.message);
-
-            await checkSession();
-            showLogin();
-            if (user?.role === 'admin') showPage('adminView');
-        };
-
-        window.handleRegisterAction = async () => {
-            const name = document.getElementById('regName').value;
-            const email = document.getElementById('regEmail').value;
-            const password = document.getElementById('regPass').value;
-
-            const { data, error } = await supabase.auth.signUp({
-                email,
-                password,
-                options: { data: { full_name: name } }
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
-
-            if (error) return alert(error.message);
-            alert("Registration successful! Please check your email for verification if enabled.");
-            toggleAuthMode('login');
-        };
-
-        window.logout = async () => {
-            await supabase.auth.signOut();
-            user = null;
-            document.getElementById('profileDropdown').classList.add('hidden');
-            updateAuthUI();
-            showPage('userView');
-        };
-
-        async function checkSession() {
-            const {
-                data: { user: activeUser },
-                error
-            } = await supabase.auth.getUser();
-
-            if (error) {
-                console.warn("Supabase session check failed:", error.message);
-            }
-
-            if (activeUser) {
-                const isAdmin = activeUser.email === 'admin@gmail.com';
-                user = {
-                    id: activeUser.id,
-                    email: activeUser.email,
-                    name: activeUser.user_metadata?.full_name || 'User',
-                    role: isAdmin ? 'admin' : 'user'
-                };
-            } else {
-                user = null;
-            }
-
-            await updateAuthUI();
-        }
-
-        // PROFILE & UI UPDATES
-        async function updateAuthUI() {
-            const btn = document.getElementById('loginBtn');
-            const admin = document.getElementById('adminLink');
-            const adminSide = document.getElementById('adminSideLink');
-            const dropdown = document.getElementById('profileDropdown');
-            const sideBtn = document.getElementById('sideLoginBtn');
-
-            if(user) {
-                // Main Header Button Update
-                btn.innerHTML = `<div class="flex items-center gap-2 text-green-600"><i class="fas fa-circle-user text-xl"></i> <span class="hidden md:inline">${user.name.split(' ')[0].toUpperCase()}</span></div>`;
-                btn.onclick = (e) => { e.stopPropagation(); dropdown.classList.toggle('hidden'); };
-                
-                // Sidebar Button Update
-                sideBtn.innerText = "MY PROFILE";
-                sideBtn.onclick = () => { dropdown.classList.toggle('hidden'); toggleMenu(); };
-
-                // Profile Dropdown Details
-                document.getElementById('profileName').innerText = user.name;
-                document.getElementById('profileEmail').innerText = user.email;
-                
-                // Fetch User-specific orders for dropdown
-                const { data: userOrders } = await supabase.from('orders')
-                    .select('*')
-                    .order('created_at', { ascending: false })
-                    .limit(10);
-                
-                const filtered = (userOrders || []).filter(o => o.customer_info?.user_email === user.email);
-                const orderList = document.getElementById('miniOrderList');
-                
-                if(filtered.length > 0) {
-                    orderList.innerHTML = filtered.map(o => `
-                        <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
-                            <div class="flex justify-between items-center">
-                                <b class="text-[10px] text-slate-500 uppercase">Order #${o.id.toString().slice(-6)}</b>
-                                <span class="text-[10px] font-bold px-2 py-1 rounded ${o.status === 'Delivered' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}">${o.status}</span>
-                            </div>
-                            <div class="text-[10px] text-slate-600 space-y-1">
-                                <p><span class="font-bold">Items:</span> ${o.items?.length || 0}</p>
-                                <p><span class="font-bold">Total:</span> ₹${o.total}</p>
-                                <p><span class="font-bold">Payment:</span> ${o.customer_info?.payment_type || 'COD'}</p>
-                                <p class="text-slate-500 italic">${new Date(o.created_at).toLocaleDateString()}</p>
-                            </div>
-                        </div>
-                    `).join('');
-                } else {
-                    orderList.innerHTML = `<p class="text-slate-400 italic font-normal text-center py-4">No orders yet</p>`;
-                }
-
-                if(user.role === 'admin') {
-                    admin.classList.remove('hidden');
-                    adminSide.classList.remove('hidden');
-                } else {
-                    admin.classList.add('hidden');
-                    adminSide.classList.add('hidden');
-                }
-            } else { 
-                btn.innerText = "LOGIN"; 
-                btn.onclick = showLogin;
-                sideBtn.innerText = "Login / Register";
-                sideBtn.onclick = () => { showLogin(); toggleMenu(); };
-                admin.classList.add('hidden'); 
-                adminSide.classList.add('hidden');
-                dropdown.classList.add('hidden');
-            }
-        }
-
-        // Close dropdown when clicking outside
-        window.addEventListener('click', (e) => {
-            const dropdown = document.getElementById('profileDropdown');
-            const btn = document.getElementById('loginBtn');
-            const modal = document.getElementById('productModal');
-            if(!dropdown.contains(e.target) && !btn.contains(e.target)) {
-                dropdown.classList.add('hidden');
-            }
-            if(modal && !modal.querySelector('.bg-white').contains(e.target) && modal.classList.contains('hidden') === false) {
-                if(e.target === modal) closeProductModal();
-            }
         });
-        
-        window.addEventListener('keydown', (e) => {
-            if(e.key === 'Escape') closeProductModal();
-        });
-
-        await checkSession();
-        fetchProducts();
     </script>
 </body>
 </html>
