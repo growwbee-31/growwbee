@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growwbee | Professional Web Design Coimbatore | Website at ₹4999</title>
+    <meta name="description" content="Get an SEO-friendly, mobile-responsive website for just ₹4999 in Coimbatore. Growwbee offers free domain, hosting, and WhatsApp integration for small businesses.">
+    <meta name="keywords" content="web design coimbatore, website development ₹4999, affordable web designer india, growwbee digital, business website startup">
+    <meta name="author" content="Growwbee Digital">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://growwbee.com/">
+    <meta property="og:title" content="Professional Websites for ₹4999 | Growwbee Coimbatore">
+    <meta property="og:description" content="Launch your business online with a premium website. Includes free domain and hosting.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Growwbee Digital",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "@id": "",
+      "url": "https://growwbee.com",
+      "telephone": "+918300808296",
+      "priceRange": "INR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Coimbatore",
+        "addressLocality": "Coimbatore",
+        "addressRegion": "TN",
+        "postalCode": "641001",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #05010d; color: white; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; }
+        .gradient-bg { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); background-attachment: fixed; }
+        .neon-text { text-shadow: 0 0 10px rgba(168, 85, 247, 0.5); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .animate-float { animation: float 5s ease-in-out infinite; }
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(139, 92, 246, 0.6); transform: scale(1.05); }
+        .gradient-border { border: 2px solid transparent; background: linear-gradient(#0f0c29, #0f0c29) padding-box, linear-gradient(to right, #8b5cf6, #d946ef) border-box; }
+        [x-cloak] { display: none !important; }
+
+        /* BRAND ANIMATION */
+        @keyframes shine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .brand-animate {
+            background: linear-gradient(90deg, #a855f7, #ec4899, #a855f7);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+            transition: all 0.5s ease;
+            letter-spacing: -1px;
+        }
+        .brand-animate:hover {
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+        }
+
+        /* NEW CALL BUTTON ANIMATION */
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(147, 51, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(147, 51, 234, 0); }
+        }
+        .animate-call {
+            animation: pulse-border 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        .animate-call::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            left: -100%;
+        }
+        .animate-call:hover::after {
+            left: 100%;
+        }
+
+        /* HERO REVEAL ANIMATIONS */
+        @keyframes reveal-image {
+            0% { transform: scale(0.9) rotateY(10deg); opacity: 0; filter: blur(10px); }
+            100% { transform: scale(1) rotateY(0deg); opacity: 1; filter: blur(0px); }
+        }
+        .hero-reveal { animation: reveal-image 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        
+        .stagger-1 { animation-delay: 0.2s; }
+        .stagger-2 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <header class="fixed w-full top-0 z-50 glass border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <!-- Brand Name with New Animation -->
+        <div class="text-2xl font-black brand-animate text-transparent cursor-default">
+            Growwbee
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#features" class="hover:text-purple-400 transition">Features</a>
+            <a href="#demo" class="hover:text-purple-400 transition">Demo</a>
+            <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
+            <a href="#portfolio" class="hover:text-purple-400 transition">Portfolio</a>
+            <a href="#faq" class="hover:text-purple-400 transition">FAQ</a>
+        </nav>
+        <!-- Updated Animated Call Button -->
+        <a href="tel:8300808296" class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full text-sm font-bold transition btn-glow animate-call flex items-center gap-2">
+            <i class="fas fa-phone-alt text-xs"></i> Call Now
+        </a>
+    </header>
+
+   <main>
+    <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
+        <!-- Content Side -->
+        <div class="lg:w-1/2 text-center lg:text-left" 
+             x-data="{ visible: false }" x-init="setTimeout(() => visible = true, 100)"
+             :class="visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'" 
+             class="transition-all duration-1000">
+            <span class="bg-purple-500/20 text-purple-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-purple-500/30">
+                Limited Offer: Starting ₹4999
+            </span>
+            <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                Grow Your Business Online with <span class="text-purple-500">Stunning Websites</span>
+            </h1>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                SEO-friendly, mobile-responsive, lightning-fast websites with free domain, hosting, and WhatsApp booking integration. Best web design startup in Coimbatore.
+            </p>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+                <a href="#pricing" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-xl font-bold btn-glow transition active:scale-95">
+                    Get My Website Now
+                </a>
+                <a href="https://wa.me/918300808296" target="_blank" rel="noopener" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-green-500 text-xl"></i> Chat on WhatsApp
+                </a>
+            </div>
+            <p class="text-sm text-gray-500">
+                <i class="fas fa-check-circle text-purple-500 mr-2"></i> Serving businesses in Coimbatore & across India.
+            </p>
+        </div>
+        
+        <!-- Image Side with Reveal Animation -->
+        <div class="lg:w-1/2 relative">
+            <div class="relative z-10 glass p-2 rounded-2xl hero-reveal opacity-0">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Professional Web Design Portfolio" class="rounded-xl shadow-2xl animate-float">
+            </div>
+            <!-- Secondary floating element with staggered reveal -->
+            <div class="absolute -bottom-10 -right-5 z-20 w-48 glass p-2 rounded-xl hidden md:block hero-reveal stagger-1 opacity-0">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400" alt="Mobile Responsive Website Preview" class="rounded-lg">
+            </div>
+            <!-- Animated Background Glow -->
+            <div class="absolute -top-10 -left-10 w-64 h-64 bg-purple-600/20 blur-[100px] rounded-full animate-pulse"></div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Everything You Need to Succeed</h2>
+            <p class="text-gray-400">High-end features included in every single package.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-600 transition">
+                    <i class="fas fa-search-dollar text-purple-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">SEO Optimized</h3>
+                <p class="text-gray-400 text-sm">Be found on Google. We build your site with search engines in mind from day one.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition">
+                    <i class="fas fa-mobile-alt text-blue-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Mobile Responsive</h3>
+                <p class="text-gray-400 text-sm">Your website will look perfect on iPhones, Androids, Tablets, and Desktops.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-pink-600 transition">
+                    <i class="fas fa-bolt text-pink-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Lightning Fast</h3>
+                <p class="text-gray-400 text-sm">Don't lose customers to slow loading times. Our sites load in under 2 seconds.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                    <i class="fab fa-whatsapp text-green-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">WhatsApp Integration</h3>
+                <p class="text-gray-400 text-sm">Direct booking and inquiries sent straight to your phone for instant conversion.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-yellow-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-600 transition">
+                    <i class="fas fa-globe text-yellow-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Free Domain & Hosting</h3>
+                <p class="text-gray-400 text-sm">No hidden costs. We provide your first year of domain and hosting for free.</p>
+            </div>
+            <div class="glass p-8 hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-600 transition">
+                    <i class="fas fa-user-cog text-orange-400 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Easy to Manage</h3>
+                <p class="text-gray-400 text-sm">We give you a simple dashboard to update your text and images effortlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20 px-6 bg-white/5 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Explore Demo Pages</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Open any demo to see the page layout and styling for different business categories.</p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            
+            <a href="gym.html" class="glass p-8 rounded-[28px] shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="text-2xl font-bold mb-3">Gym Demo</h3>
+                <p class="text-gray-400">A fitness studio landing page with membership and training highlights.</p>
+            </a>
+            <a href="resturent.html" class="glass p-8 rounded-[28px] shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                <h3 class="text-2xl font-bold mb-3">Restaurant Demo</h3>
+                <p class="text-gray-400">A restaurant site design with menu, reservations, and location details.</p>
+            </a>
+           
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">Flexible Pricing for Every Need</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Business Website Card -->
+                <div class="glass p-1 bg-gradient-to-br from-purple-500 to-indigo-500 shadow-2xl rounded-3xl">
+                    <div class="bg-[#05010d] rounded-[22px] p-8 h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4">Business Website</h3>
+                        <div class="flex justify-center items-baseline gap-2 mb-8">
+                            <span class="text-5xl font-extrabold text-white">₹4,999</span>
+                            <span class="text-gray-500 line-through">₹9,999</span>
+                        </div>
+                        <ul class="text-left space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Free Domain & Hosting</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Professional Modern UI/UX</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Mobile Responsive Design</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> WhatsApp Integration</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> SEO Friendly Structure</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> 48-Hour Delivery</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Digital Marketing Use</li>
+                        </ul>
+                        <a href="https://wa.me/918300808296" class="block w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-xl font-bold text-lg transition">
+                            Choose Business
+                        </a>
+                    </div>
+                </div>
+
+                <!-- E-commerce Website Card -->
+                <div class="gradient-border rounded-3xl p-1 bg-gradient-to-br from-purple-500 to-pink-500 shadow-2xl relative">
+                    <div class="absolute top-10 right-[-35px] bg-pink-600 text-white px-12 py-1 rotate-45 text-xs font-bold uppercase z-10">Premium</div>
+                    <div class="bg-[#05010d] rounded-[22px] p-8 h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4">E-commerce Website</h3>
+                        <div class="flex justify-center items-baseline gap-2 mb-8">
+                            <span class="text-5xl font-extrabold text-white">₹18,000</span>
+                            <span class="text-gray-500 line-through">₹25,000</span>
+                        </div>
+                        <ul class="text-left space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-pink-500"></i> Everything in Business Plan</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-pink-500"></i> Admin Dashboard (Manage Products)</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-pink-500"></i> 40–60 Product Uploads</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-pink-500"></i> Shopping Cart & Checkout</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-pink-500"></i> Login/Signup System</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-pink-500"></i> Order Management System</li>
+                        </ul>
+                        <a href="https://wa.me/918300808296" class="block w-full bg-gradient-to-r from-purple-600 to-pink-600 py-4 rounded-xl font-bold text-lg btn-glow transition">
+                            Choose E-commerce
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 px-6 max-w-3xl mx-auto" x-data="{ active: null }">
+        <h2 class="text-4xl font-bold text-center mb-12">Common Questions</h2>
+        <div class="space-y-4">
+            <div class="glass overflow-hidden">
+                <button @click="active = active === 1 ? null : 1" class="w-full p-6 text-left flex justify-between items-center font-bold">
+                    How long does it take?
+                    <i class="fas" :class="active === 1 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                </button>
+                <div x-show="active === 1" class="p-6 pt-0 text-gray-400 text-sm">
+                    Business websites take 48-72 hours. E-commerce platforms typically take 7-10 days depending on product complexity.
+                </div>
+            </div>
+
+            <div class="glass overflow-hidden">
+                <button @click="active = active === 2 ? null : 2" class="w-full p-6 text-left flex justify-between items-center font-bold">
+                    Are there any hidden renewal fees?
+                    <i class="fas" :class="active === 2 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                </button>
+                <div x-show="active === 2" class="p-6 pt-0 text-gray-400 text-sm">
+                    No hidden fees. Your first year of domain and hosting is included. After the first year, you only pay for standard domain and hosting renewal at market prices.
+                </div>
+            </div>
+
+            <div class="glass overflow-hidden">
+                <button @click="active = active === 3 ? null : 3" class="w-full p-6 text-left flex justify-between items-center font-bold">
+                    Can I update the website myself?
+                    <i class="fas" :class="active === 3 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                </button>
+                <div x-show="active === 3" class="p-6 pt-0 text-gray-400 text-sm">
+                    Absolutely! We provide an easy-to-use dashboard where you can change text, images, and prices without any coding knowledge.
+                </div>
+            </div>
+
+            <div class="glass overflow-hidden">
+                <button @click="active = active === 4 ? null : 4" class="w-full p-6 text-left flex justify-between items-center font-bold">
+                    Will my website work on mobile?
+                    <i class="fas" :class="active === 4 ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                </button>
+                <div x-show="active === 4" class="p-6 pt-0 text-gray-400 text-sm">
+                    Yes, 100%. Every website we build is "Mobile-First," meaning it is fully responsive and looks professional on all smartphones, tablets, and desktops.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div>
+            <h2 class="text-4xl font-bold mb-6">Let's Get Started</h2>
+            <p class="text-gray-400 mb-8 leading-relaxed">Ready to take your business to the next level? We're here to help you build your digital identity today.</p>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Call Us</p>
+                        <p class="font-bold">+91 8300808296</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Email Us</p>
+                        <p class="font-bold">growwbee@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Location</p>
+                        <p class="font-bold">Coimbatore, Tamil Nadu, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="glass p-8">
+            <form action="#" method="POST" class="space-y-4">
+                <input type="text" name="name" required placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition">
+                <input type="tel" name="phone" required placeholder="Phone Number" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition">
+                <select name="type" class="w-full bg-[#1a1a2e] border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition text-gray-400">
+                    <option disabled selected>Select Business Type</option>
+                    <option>E-commerce</option>
+                    <option>Restaurant</option>
+                    <option>Real Estate</option>
+                    <option>Other</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your business" rows="4" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-purple-500 transition"></textarea>
+                <button type="submit" class="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-purple-500 hover:text-white transition">Get Started Now</button>
+            </form>
+        </div>
+    </section>
+   </main>
+
+    <footer class="py-12 border-t border-white/10 px-6 text-center text-gray-500 text-sm">
+        <div class="mb-6 flex justify-center gap-6 text-xl">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>© 2026 Growwbee Digital. All rights reserved. | Made with ❤️ for Small Businesses</p>
+    </footer>
+
+    <a href="https://wa.me/918300808296" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 flex items-center group">
+        <span class="bg-black text-white px-4 py-2 rounded-lg text-sm mr-2 opacity-0 group-hover:opacity-100 transition shadow-lg border border-white/10">Chat with us</span>
+        <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl animate-bounce text-3xl">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Fitness Club | Best Gym in India</title>
+    <meta name="description" content="Join India's premium fitness destination. Expert trainers, luxury facilities, and guaranteed results. Claim your free trial!">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0a0a0a; color: white; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+       
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; animation: zoomEffect 20s infinite alternate; }
+        @keyframes zoomEffect { from { transform: scale(1); } to { transform: scale(1.1); } }
+       
+        .neon-glow { box-shadow: 0 0 20px rgba(255, 49, 49, 0.6); transition: 0.3s; }
+        .neon-glow:hover { box-shadow: 0 0 35px rgba(255, 49, 49, 0.9); transform: translateY(-3px); }
+       
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.4s; }
+        .glass-card:hover { border-color: #FF3131; transform: translateY(-10px); box-shadow: 0 10px 30px rgba(255, 49, 49, 0.2); }
+       
+        .sticky-nav { backdrop-filter: blur(15px); background: rgba(10, 10, 10, 0.8); }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; z-index: 100; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+       
+        .swiper { width: 100%; padding-top: 50px; padding-bottom: 50px; }
+        .swiper-slide { background-position: center; background-size: cover; width: 300px; height: 400px; border-radius: 15px; overflow: hidden; filter: grayscale(100%); transition: 0.5s; border: 1px solid rgba(255,255,255,0.1); }
+        .swiper-slide-active { filter: grayscale(0%); border-color: #FF3131; box-shadow: 0 0 20px rgba(255, 49, 49, 0.4); }
+        .swiper-pagination-bullet { background: #FF3131 !important; }
+
+        .mobile-cta { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 90; display: none; }
+        @media (max-width: 768px) { .mobile-cta { display: block; } }
+       
+        .map-container { filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+    </style>
+</head>
+<body>
+
+    <nav class="sticky-nav fixed w-full z-50 px-6 py-4 flex justify-between items-center border-b border-white/10">
+        <div class="text-2xl font-black tracking-tighter text-white">ELITE<span class="text-red-600">FITNESS</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold">
+            <a href="#about" class="hover:text-red-500 transition">ABOUT</a>
+            <a href="#programs" class="hover:text-red-500 transition">PROGRAMS</a>
+            <a href="#gallery" class="hover:text-red-500 transition">GALLERY</a>
+            <a href="#plans" class="hover:text-red-500 transition">MEMBERSHIP</a>
+            <a href="#contact" class="hover:text-red-500 transition">CONTACT</a>
+        </div>
+        <a href="#plans" class="bg-red-600 px-6 py-2 rounded-full font-bold text-xs neon-glow">JOIN NOW</a>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative z-10 px-4" data-aos="fade-up">
+            <span class="text-red-500 font-bold tracking-widest text-sm mb-4 block">LIMITED OFFER: FREE TRAIL SESSION</span>
+            <h1 class="text-5xl md:text-8xl font-black leading-tight mb-6">SHAPE YOUR BODY.<br><span class="text-red-600">RULE YOUR LIFE.</span></h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10">Experience the gold standard of fitness in India with certified coaches and elite equipment.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#plans" class="bg-red-600 text-white px-10 py-4 rounded-md font-black neon-glow uppercase">Join Now</a>
+                <a href="#contact" class="border-2 border-white px-10 py-4 rounded-md font-black hover:bg-white hover:text-black transition uppercase">Get Free Trial</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-[#0f0f0f]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-black mb-6">The Ultimate <span class="text-red-600">Fitness Arena</span></h2>
+                <p class="text-gray-400 leading-relaxed mb-6">Elite Fitness Club is India's premium gym designed for those who settle for nothing but the best. From high-intensity training to peaceful yoga sessions, we offer a holistic approach to your health goals.</p>
+                <ul class="space-y-4">
+                    <li><i class="fas fa-check text-red-600 mr-2"></i> World-Class Cardio & Strength Zones</li>
+                    <li><i class="fas fa-check text-red-600 mr-2"></i> Certified Personal Trainers</li>
+                    <li><i class="fas fa-check text-red-600 mr-2"></i> Luxury Spa & Steam Room</li>
+                </ul>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80" class="rounded-lg shadow-2xl" alt="Gym Interior">
+                <div class="absolute -bottom-6 -right-6 bg-red-600 p-8 hidden md:block">
+                    <p class="text-4xl font-black">15+</p>
+                    <p class="text-xs uppercase">Cities Across India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-24 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black mb-4">Our Programs</h2>
+            <div class="h-1 w-20 bg-red-600 mx-auto"></div>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-xl" data-aos="zoom-in">
+                <i class="fas fa-dumbbell text-4xl text-red-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Body Building</h3>
+                <p class="text-gray-400 text-sm">Advanced weight lifting and muscle hypertrophy plans for serious gains.</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-om text-4xl text-red-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Yoga & Flexibility</h3>
+                <p class="text-gray-400 text-sm">Find your balance with traditional and power yoga sessions.</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-fire text-4xl text-red-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">HIIT & Cardio</h3>
+                <p class="text-gray-400 text-sm">Explosive workouts designed to burn calories and improve heart health.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-[#0a0a0a] overflow-hidden">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-black mb-4">Inside The <span class="text-red-600">Arena</span></h2>
+            <p class="text-gray-400">Peek into the best gym experience in India</p>
+        </div>
+       
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&q=80" class="w-full h-full object-cover"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1581009146145-b5ef03a7403f?auto=format&fit=crop&q=80" class="w-full h-full object-cover"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&q=80" class="w-full h-full object-cover"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1574673139054-5a8d8eee5d41?auto=format&fit=crop&q=80" class="w-full h-full object-cover"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80" class="w-full h-full object-cover"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="plans" class="py-24 px-6 bg-[#0f0f0f]">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black mb-4">Membership Plans</h2>
+            <p class="text-gray-400">Premium fitness, affordable pricing.</p>
+        </div>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+            <div class="glass-card p-8 rounded-xl text-center">
+                <h3 class="text-lg font-bold mb-4">Monthly</h3>
+                <div class="text-4xl font-black mb-6">₹2,499<span class="text-sm text-gray-500">/mo</span></div>
+                <ul class="text-sm text-gray-400 space-y-3 mb-8">
+                    <li>Full Gym Access</li>
+                    <li>General Training</li>
+                    <li>Locker Access</li>
+                </ul>
+                <button class="w-full border border-red-600 py-3 hover:bg-red-600 transition font-bold">SELECT PLAN</button>
+            </div>
+            <div class="glass-card p-10 rounded-xl text-center border-red-600 bg-red-600/5 scale-110 relative neon-glow">
+                <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 px-4 py-1 text-xs font-black rounded-full">BEST VALUE</span>
+                <h3 class="text-lg font-bold mb-4">Annual Elite</h3>
+                <div class="text-4xl font-black mb-6">₹18,999<span class="text-sm text-gray-400">/yr</span></div>
+                <ul class="text-sm text-gray-200 space-y-3 mb-8">
+                    <li>Equivalent to ₹1,583/mo</li>
+                    <li>Steam & Sauna Free</li>
+                    <li>Diet Consultation</li>
+                    <li>All India Center Access</li>
+                </ul>
+                <button class="w-full bg-red-600 py-3 font-bold hover:bg-red-700 transition uppercase">Join Today</button>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <h3 class="text-lg font-bold mb-4">Quarterly</h3>
+                <div class="text-4xl font-black mb-6">₹6,499<span class="text-sm text-gray-500">/3mo</span></div>
+                <ul class="text-sm text-gray-400 space-y-3 mb-8">
+                    <li>Full Gym Access</li>
+                    <li>Yoga Classes Included</li>
+                    <li>Personal Trainer Intro</li>
+                </ul>
+                <button class="w-full border border-red-600 py-3 hover:bg-red-600 transition font-bold">SELECT PLAN</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 mb-16">
+                <div data-aos="fade-up">
+                    <h2 class="text-4xl font-black mb-8">Contact <span class="text-red-600">Us</span></h2>
+                    <form class="space-y-6">
+                        <input type="text" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-md focus:outline-none focus:border-red-600">
+                        <input type="tel" placeholder="+91-0000000000" class="w-full bg-white/5 border border-white/10 p-4 rounded-md focus:outline-none focus:border-red-600">
+                        <textarea placeholder="Message" rows="4" class="w-full bg-white/5 border border-white/10 p-4 rounded-md focus:outline-none focus:border-red-600"></textarea>
+                        <button class="w-full bg-red-600 py-4 font-black neon-glow uppercase">Submit Request</button>
+                    </form>
+                </div>
+               
+                <div data-aos="fade-up" class="flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-6 text-red-600 underline decoration-2 underline-offset-8">Arena Details</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-red-600 p-3 rounded-lg"><i class="fas fa-map-marker-alt text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Location</h4>
+                                <p class="text-gray-400">7th Floor, Elite Tower, Bandra Kurla Complex, Mumbai, MH 400051</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-red-600 p-3 rounded-lg"><i class="fas fa-phone-alt text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Contact Number</h4>
+                                <p class="text-gray-400">+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-red-600 p-3 rounded-lg"><i class="fas fa-clock text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Opening Hours</h4>
+                                <p class="text-gray-400">Mon - Sat: 5:30 AM - 10:30 PM</p>
+                                <p class="text-gray-400">Sun: 7:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-[450px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative" data-aos="zoom-in">
+                <iframe
+                    class="w-full h-full map-container"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15086.1018318912!2d72.8569!3d19.0674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8e123f8d271%3A0x1ba335c05447d141!2sBandra%20Kurla%20Complex%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="text-2xl font-black mb-4">ELITE<span class="text-red-600">FITNESS</span></div>
+        <p class="text-gray-500 text-sm mb-6">Transforming India's fitness journey, one rep at a time.</p>
+        <div class="flex justify-center space-x-6 mb-8 text-xl">
+            <a href="#" class="hover:text-red-600"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="text-xs text-gray-600">© 2026 Elite Fitness India. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/919876543210" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+   
+    <div class="mobile-cta p-4 bg-[#0a0a0a] border-t border-white/10">
+        <button class="w-full bg-red-600 py-3 rounded-md font-black neon-glow uppercase">Join Elite India</button>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: { rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true },
+            pagination: { el: ".swiper-pagination" },
+            autoplay: { delay: 2500, disableOnInteraction: false }
+        });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
