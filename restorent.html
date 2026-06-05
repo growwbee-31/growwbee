@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karshana Hotel & Bakery | Best Bakery Cafe & Dining in Coimbatore</title>
+    <meta name="description" content="Karshana Hotel & Bakery in Coimbatore serves freshly baked breads, artisan cakes, and premium dining experiences. Order online or visit our bakery cafe today.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Coimbatore bakery, bakery cafe in Coimbatore, restaurant in Coimbatore, fresh bakery items, hotel bakery, cake shop Coimbatore">
+    <link rel="canonical" href="https://kovaihomes.in/restorent.html">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Karshana Hotel & Bakery | Best Bakery Cafe & Dining in Coimbatore">
+    <meta property="og:description" content="Enjoy freshly baked breads, cakes and premium meals at Karshana Hotel & Bakery, a top bakery cafe in Coimbatore.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2000&auto=format&fit=crop">
+    <meta property="og:url" content="https://kovaihomes.in/restorent.html">
+    <meta property="og:site_name" content="Karshana Hotel & Bakery">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karshana Hotel & Bakery | Best Bakery Cafe & Dining in Coimbatore">
+    <meta name="twitter:description" content="Karshana Hotel & Bakery offers artisan cakes, fresh breads and premium dining in Coimbatore. Order now or visit our cafe.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2000&auto=format&fit=crop">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Karshana Hotel & Bakery",
+      "description": "Premium bakery cafe and dining experience in Coimbatore with freshly baked breads, cakes and gourmet meals.",
+      "url": "https://kovaihomes.in/restorent.html",
+      "telephone": "+918300808296",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Coimbatore",
+        "addressLocality": "Coimbatore",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "641001",
+        "addressCountry": "IN"
+      },
+      "servesCuisine": "Bakery, Cafe, Restaurant",
+      "priceRange": "₹₹",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2000&auto=format&fit=crop",
+      "sameAs": [
+        "https://www.facebook.com/karshana",
+        "https://www.instagram.com/karshana"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FDFBF7;
+            --beige: #F5E6D3;
+            --gold: #D4AF37;
+            --chocolate: #3E2723;
+            --nav-bg: #F8F3E9;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--cream); color: var(--chocolate); scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        .brand-container { line-height: 1; display: flex; flex-direction: column; }
+        
+        /* Brand Name Lighting Animation */
+        .brand-main { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            letter-spacing: -0.02em; 
+            color: var(--chocolate);
+            position: relative;
+            background: linear-gradient(to right, var(--chocolate) 20%, var(--gold) 40%, var(--gold) 60%, var(--chocolate) 80%);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: lighting-sweep 4s linear infinite;
+        }
+
+        @keyframes lighting-sweep {
+            to { background-position: 200% center; }
+        }
+
+        .brand-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-top: 2px; }
+
+        .btn-gold { 
+            background-color: var(--gold); 
+            color: white; 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 9999px; 
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-gold:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 0 15px rgba(212,175,55,0.6); 
+        }
+
+        .btn-order {
+            background-color: var(--chocolate);
+            color: #F5E6D3;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            border: 2px solid var(--chocolate);
+            /* Added Animation for the Order Now button */
+            animation: pulse-order 2s infinite;
+        }
+        .btn-order:hover {
+            background-color: transparent;
+            color: var(--chocolate);
+            animation-play-state: paused;
+        }
+
+        /* Navbar Button Animation Keyframes */
+        @keyframes pulse-order {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(62, 39, 35, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(62, 39, 35, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(62, 39, 35, 0); }
+        }
+
+        .btn-outline { 
+            border: 2px solid var(--gold); 
+            color: var(--gold); 
+            padding: 0.75rem 2rem; 
+            border-radius: 9999px; 
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-outline:hover { 
+            background-color: var(--gold); 
+            color: white; 
+        }
+        
+        .hero-animation-container { position: relative; width: 100%; max-width: 300px; height: 200px; margin: auto; }
+        .bread-slice {
+            position: absolute;
+            background: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=300&auto=format&fit=crop') center/cover;
+            width: 60px; height: 120px; border-radius: 10px;
+            box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
+            animation: slice-motion 4s infinite ease-in-out;
+        }
+        @keyframes slice-motion {
+            0%, 100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+            50% { transform: translateX(40px) translateY(-10px) rotate(5deg); opacity: 0.9; }
+        }
+
+        .nav-sticky { background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(62, 39, 35, 0.1); transition: all 0.3s ease; }
+        
+        .whatsapp-float { 
+            position: fixed; 
+            bottom: 25px; 
+            right: 25px; 
+            z-index: 100; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: whatsapp-jump 3s infinite ease-in-out;
+        }
+        
+        .whatsapp-float:hover { 
+            transform: scale(1.1);
+            background-color: #128C7E;
+            animation-play-state: paused;
+        }
+
+        .whatsapp-float .tooltip {
+            position: absolute;
+            right: 75px;
+            background-color: white;
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 70px;
+        }
+
+        @keyframes whatsapp-jump {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+            40% { transform: translateY(-20px) scale(1.05); box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4); }
+            60% { transform: translateY(-10px) scale(1.02); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+        }
+        
+        #productModal { display: none; }
+        #productModal.active { display: flex; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--cream); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 py-4 px-4 md:px-12 flex justify-between items-center nav-sticky shadow-sm">
+        <div class="brand-container">
+            <span class="brand-main">KARSHANA</span>
+            <span class="brand-sub">Hotel & Bakery</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-8 font-medium">
+            <a href="#home" class="hover:text-[#D4AF37] transition">Home</a>
+            <a href="#bakery" class="hover:text-[#D4AF37] transition">Bakery</a>
+            <a href="#new-arrivals" class="hover:text-[#D4AF37] transition">Menu</a>
+            <a href="#menu" class="hover:text-[#D4AF37] transition">About</a>
+            <a href="#contact" class="hover:text-[#D4AF37] transition">Contact</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <a href="https://wa.me/918300808296" class="btn-order text-xs md:text-sm uppercase">Order Now</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover opacity-15" alt="Restaurant Background">
+        </div>
+        
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center z-10">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl md:text-7xl mb-6 leading-tight">Freshly Baked Delights & <span class="text-[#D4AF37]">Exquisite Dining</span></h1>
+                <p class="text-lg mb-8 text-gray-700">Experience the perfect blend of artisanal bakery treats and premium hospitality in the heart of Coimbatore.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#menu" class="btn-gold">View Menu</a>
+                    <a href="#contact" class="btn-outline">Find Us</a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center items-center" data-aos="zoom-in">
+                <div class="hero-animation-container">
+                    <div class="bread-slice" style="left: 0px; animation-delay: 0s;"></div>
+                    <div class="bread-slice" style="left: 50px; animation-delay: 0.2s;"></div>
+                    <div class="bread-slice" style="left: 100px; animation-delay: 0.4s;"></div>
+                    <div class="bread-slice" style="left: 150px; animation-delay: 0.6s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW 5 PRODUCT SECTION -->
+    <section id="new-arrivals" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between mb-8" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl">New <span class="text-[#D4AF37]">Arrivals</span></h2>
+                <div class="h-1 flex-grow mx-6 bg-beige hidden md:block"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                <div class="group bg-[#FDFBF7] p-3 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=400&auto=format&fit=crop&q=60" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-sm">Chocolate Cupcake</h4>
+                    <p class="text-[#D4AF37] text-xs font-semibold mb-2">₹180.00</p>
+                    <button onclick="openModal('Chocolate Cupcake', '₹180.00', 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=400')" class="w-full py-2 bg-chocolate text-beige text-[10px] uppercase font-bold rounded-lg hover:bg-opacity-90 transition">Order Now</button>
+                </div>
+                <div class="group bg-[#FDFBF7] p-3 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1582298538104-fe2e74c27f59?w=400&auto=format&fit=crop&q=60" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-sm">Cream Bun</h4>
+                    <p class="text-[#D4AF37] text-xs font-semibold mb-2">₹120.00</p>
+                    <button onclick="openModal('Cream Bun', '₹120.00', 'https://images.unsplash.com/photo-1582298538104-fe2e74c27f59?w=400')" class="w-full py-2 bg-chocolate text-beige text-[10px] uppercase font-bold rounded-lg hover:bg-opacity-90 transition">Order Now</button>
+                </div>
+                <div class="group bg-[#FDFBF7] p-3 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-lg aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=400&auto=format&fit=crop&q=60" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-sm">Fruit Tart</h4>
+                    <p class="text-[#D4AF37] text-xs font-semibold mb-2">₹250.00</p>
+                    <button onclick="openModal('Fruit Tart', '₹250.00', 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=400')" class="w-full py-2 bg-chocolate text-beige text-[10px] uppercase font-bold rounded-lg hover:bg-opacity-90 transition">Order Now</button>
+                </div>
+                <div class="group bg-[#FDFBF7] p-3 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden rounded-lg aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1579306194872-64d3b7bac4c2?w=400&auto=format&fit=crop&q=60" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-sm">Milk Bread</h4>
+                    <p class="text-[#D4AF37] text-xs font-semibold mb-2">₹380.00</p>
+                    <button onclick="openModal('Milk Bread', '₹380.00', 'https://images.unsplash.com/photo-1579306194872-64d3b7bac4c2?w=400')" class="w-full py-2 bg-chocolate text-beige text-[10px] uppercase font-bold rounded-lg hover:bg-opacity-90 transition">Order Now</button>
+                </div>
+                <div class="group bg-[#FDFBF7] p-3 rounded-xl shadow-sm col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative overflow-hidden rounded-lg aspect-[2/1] md:aspect-square mb-3">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&auto=format&fit=crop&q=60" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-sm">Savory Pastry</h4>
+                    <p class="text-[#D4AF37] text-xs font-semibold mb-2">₹150.00</p>
+                    <button onclick="openModal('Savory Pastry', '₹150.00', 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400')" class="w-full py-2 bg-chocolate text-beige text-[10px] uppercase font-bold rounded-lg hover:bg-opacity-90 transition">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="productModal" class="fixed inset-0 z-[60] bg-black/60 items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl relative" data-aos="zoom-in">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-chocolate text-xl"><i class="fas fa-times"></i></button>
+            <img id="modalImg" src="" class="w-full h-56 object-cover">
+            <div class="p-8 text-center">
+                <h3 id="modalTitle" class="text-2xl mb-2"></h3>
+                <p id="modalPrice" class="text-[#D4AF37] font-bold text-xl mb-6"></p>
+                <a id="modalWA" href="" target="_blank" class="btn-gold w-full flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Confirm Order
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="bakery" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl mb-4" data-aos="fade-up">Our Signature Bakery</h2>
+            <p class="mb-12 text-gray-500 italic" data-aos="fade-up">Handcrafted daily with love and the finest ingredients</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="group bg-[#FDFBF7] p-4 rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=800&auto=format&fit=crop" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl mb-2">Classic Pastries</h3>
+                    <p class="text-gray-600 text-sm mb-4">Buttery, flaky, and golden-brown textures.</p>
+                    <p class="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">Fresh Daily</p>
+                </div>
+                <div class="group bg-[#FDFBF7] p-4 rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl mb-2">Artisan Loaves</h3>
+                    <p class="text-gray-600 text-sm mb-4">Traditional baking techniques for the perfect crust.</p>
+                    <p class="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">₹450.00</p>
+                </div>
+                <div class="group bg-[#FDFBF7] p-4 rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xl mb-2">Specialty Cookies</h3>
+                    <p class="text-gray-600 text-sm mb-4">The ultimate sweet treat for your coffee break.</p>
+                    <p class="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">Premium Choice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-[#F5E6D3]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl text-center mb-12" data-aos="fade-up">The Dining Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up">
+                   <img src="https://images.unsplash.com/photo-1539056276907-dc946d5098c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmFtaWx5JTIwZGlubmVyfGVufDB8fDB8fHww" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl mb-2">Family Dining</h3>
+                        <p class="text-gray-600 mb-4">Spacious seating perfect for gatherings and celebrations.</p>
+                        <a href="https://wa.me/918300808296" class="btn-outline inline-block w-full py-2">Reserve Table</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl mb-2">Private Cabin</h3>
+                        <p class="text-gray-600 mb-4">Quiet and cozy spaces for business or private meals.</p>
+                        <a href="https://wa.me/918300808296" class="btn-outline inline-block w-full py-2">Book Space</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop" class="w-full h-56 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl mb-2">Outdoor Ambience</h3>
+                        <p class="text-gray-600 mb-4">Enjoy your meal with the fresh breeze of Coimbatore.</p>
+                        <a href="https://wa.me/918300808296" class="btn-outline inline-block w-full py-2">Check Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-[#FDFBF7]">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl mb-6">Find Your Table</h2>
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-start gap-4">
+                        <span class="text-xl mt-1">📍</span>
+                        <div>
+                            <strong class="block">Address</strong>
+                            <span class="text-gray-600">Avinashi Road, Coimbatore, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-xl mt-1">📞</span>
+                        <div>
+                            <strong class="block">Phone</strong>
+                            <span class="text-gray-600">+91 8300808296</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="text-xl mt-1">⏰</span>
+                        <div>
+                            <strong class="block">Hours</strong>
+                            <span class="text-gray-600">6:00 AM - 10:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden h-64 shadow-inner bg-gray-200">
+                    <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125322.441531335!2d76.8848325!3d11.0123534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-beige" data-aos="fade-left">
+                <h3 class="text-2xl mb-6">Send an Inquiry</h3>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-4 bg-[#FDFBF7] border-none rounded-lg focus:ring-2 focus:ring-[#D4AF37] outline-none">
+                    <input type="tel" placeholder="Phone Number" class="w-full p-4 bg-[#FDFBF7] border-none rounded-lg focus:ring-2 focus:ring-[#D4AF37] outline-none">
+                    <textarea placeholder="Tell us what you'd like to order or reserve..." rows="4" class="w-full p-4 bg-[#FDFBF7] border-none rounded-lg focus:ring-2 focus:ring-[#D4AF37] outline-none"></textarea>
+                    <button type="submit" class="btn-gold w-full uppercase font-bold tracking-widest py-4">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#3E2723] text-white py-12 px-6">
+        <div class="container mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <div class="brand-container mb-4">
+                    <span class="brand-main" style="color:white">KARSHANA</span>
+                    <span class="brand-sub">Hotel & Bakery</span>
+                </div>
+                <p class="text-sm opacity-70">The premier destination for food lovers in Coimbatore. Experience taste, tradition, and comfort in every bite.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <div class="flex flex-col space-y-2 text-sm opacity-70">
+                    <a href="#bakery" class="hover:text-white transition">Bakery Shop</a>
+                    <a href="#menu" class="hover:text-white transition">Dining Menu</a>
+                    <a href="#contact" class="hover:text-white transition">Location</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+                    <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 mt-12 pt-8 text-center text-xs opacity-50">
+            © 2026 Karshana Hotel & Bakery. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Latest WhatsApp Floating Button -->
+    <a href="https://wa.me/918300808296" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <span class="tooltip">Chat with us</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.204-1.102a7.932 7.932 0 0 0 3.79.959h.004c4.368 0 7.926-3.558 7.93-7.93a7.855 7.855 0 0 0-2.327-5.595zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, disable: 'mobile' });
+        
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.paddingTop = '0.5rem';
+                nav.style.paddingBottom = '0.5rem';
+                nav.classList.add('shadow-md');
+            } else {
+                nav.style.paddingTop = '1rem';
+                nav.style.paddingBottom = '1rem';
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        function openModal(title, price, img) {
+            const modal = document.getElementById('productModal');
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalImg').src = img;
+            
+            const message = encodeURIComponent(`Hi Karshana! I'd like to order: ${title} (${price})`);
+            document.getElementById('modalWA').href = `https://wa.me/918300808296?text=${message}`;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
