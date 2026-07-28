@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="google-adsense-account" content="ca-pub-2120177770436283">
+   
+    <!-- Primary Meta Tags (SEO) -->
+    <title>Turbo Racer 2D - Play Free High-Speed Browser Racing Game</title>
+    <meta name="title" content="Turbo Racer 2D - Play Free High-Speed Browser Racing Game">
+    <meta name="description" content="Experience Turbo Racer 2D, a hyper-animated HTML5 browser racing game. Dodge traffic, gain massive speed, and compete for the highest score in this retro arcade racer.">
+    <meta name="keywords" content="racing game, browser game, HTML5 game, 2D racer, free online games, retro arcade, driving simulator, turbo racer">
+    <meta name="author" content="Game Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourwebsite.com/turbo-racer-2d">
+
+    <!-- Open Graph / Facebook (Social Media SEO) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/turbo-racer-2d">
+    <meta property="og:title" content="Turbo Racer 2D - Free High-Speed Browser Racing Game">
+    <meta property="og:description" content="Experience Turbo Racer 2D, a hyper-animated HTML5 browser racing game. Dodge traffic, gain massive speed, and compete for the highest score!">
+    <meta property="og:image" content="https://yourwebsite.com/assets/turbo-racer-thumbnail.jpg">
+
+    <!-- Twitter (Social Media SEO) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/turbo-racer-2d">
+    <meta property="twitter:title" content="Turbo Racer 2D - Free High-Speed Browser Racing Game">
+    <meta property="twitter:description" content="Experience Turbo Racer 2D, a hyper-animated HTML5 browser racing game. Dodge traffic, gain massive speed, and compete for the highest score!">
+    <meta property="twitter:image" content="https://yourwebsite.com/assets/turbo-racer-thumbnail.jpg">
+
+    <!-- Structured Data (JSON-LD Schema for Google SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Turbo Racer 2D",
+      "url": "https://yourwebsite.com/turbo-racer-2d",
+      "description": "A high-speed endless 2D racing game where players dodge traffic to gain points and accelerate.",
+      "genre": ["Racing", "Arcade", "Action"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;user-select:none}body{background:linear-gradient(135deg,#0f172a,#1e1b4b,#311042);background-size:400% 400%;animation:daylightCycle 30s ease infinite;display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden;flex-direction:column}@keyframes daylightCycle{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}.shake-screen{animation:cameraImpact .4s ease-out}@keyframes cameraImpact{0%,100%,60%{transform:translate(0,0) rotate(0deg)}20%{transform:translate(-8px,5px) rotate(-1deg)}40%{transform:translate(6px,-5px) rotate(1deg)}80%{transform:translate(4px,-2px) rotate(.5deg)}}.game-container{position:relative;width:450px;height:calc(100vh - 100px);background:linear-gradient(to bottom,#1e293b,#0f172a);border-left:12px dashed #475569;border-right:12px dashed #475569;overflow:hidden;box-shadow:0 0 60px rgba(0,0,0,.9)}.game-container::before{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(90deg,#3b82f6 1%,transparent 1%,transparent 99%,#3b82f6 99%);pointer-events:none;z-index:1;opacity:.7}.line{position:absolute;width:8px;height:120px;background:rgba(241,196,15,.85);left:50%;transform:translateX(-50%);z-index:2;box-shadow:0 0 10px rgba(241,196,15,.5);will-change:transform,top}.speed-line{position:absolute;width:2px;height:80px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.25));z-index:2;will-change:transform,top}.car,.enemy{position:absolute;width:55px;height:95px;border-radius:12px;z-index:3;box-shadow:0 20px 30px rgba(0,0,0,.7);will-change:transform,left,top}.car{background:linear-gradient(to bottom,#ef4444,#991b1b);bottom:40px;left:195px;transition:transform .12s ease-out}.car::before,.enemy::before{content:'';position:absolute;top:22px;left:8px;width:39px;height:24px;background:linear-gradient(to bottom,#1e293b,#334155);border-radius:6px;border-bottom:3px solid #94a3b8}.car::after,.enemy::after{content:'';position:absolute;width:8px;height:6px;background:#fef08a;top:-2px;border-radius:2px}.car::after{left:6px;box-shadow:0 -5px 15px #fde047,-15px -40px 30px rgba(254,240,138,.4),15px -40px 30px rgba(254,240,138,.4)}.enemy::after{left:6px;background:#ef4444;top:auto;bottom:-2px;box-shadow:0 5px 15px #ef4444,-15px 40px 25px rgba(239,68,68,.3),15px 40px 25px rgba(239,68,68,.3)}.car-light-right{position:absolute;width:8px;height:6px;background:#fef08a;top:-2px;right:6px;border-radius:2px;box-shadow:0 -5px 15px #fde047}.enemy-light-right{position:absolute;width:8px;height:6px;background:#ef4444;bottom:-2px;right:6px;border-radius:2px;box-shadow:0 5px 10px #ef4444}.exhaust-particle{position:absolute;width:10px;height:10px;border-radius:50%;pointer-events:none;z-index:2;animation:exhaustBurn .35s cubic-bezier(.1,.8,.3,1) forwards;will-change:transform,opacity}@keyframes exhaustBurn{0%{transform:translateY(0) scale(1.2);background:#38bdf8;filter:blur(1px);opacity:.9}50%{background:#f43f5e;filter:blur(2px)}100%{transform:translateY(50px) scale(3);background:#eab308;filter:blur(4px);opacity:0}}.tilt-left{transform:rotate(-9deg) skewX(-3deg)}.tilt-right{transform:rotate(9deg) skewX(3deg)}.dashboard{position:absolute;top:20px;left:20px;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);padding:15px 25px;border-radius:12px;color:#fff;border-left:5px solid #3b82f6;z-index:5;box-shadow:0 10px 25px rgba(0,0,0,.4);border-top:1px solid rgba(255,255,255,.1)}.dashboard div{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:#94a3b8;margin-bottom:2px}.dashboard span{font-size:26px;font-weight:800;color:#38bdf8;display:inline-block;transition:transform .1s ease}.pulse-score{animation:surgeScore .2s ease-out}@keyframes surgeScore{0%,100%{transform:scale(1);color:#f43f5e}50%{transform:scale(1.3);color:#38bdf8}}.controls-container{width:450px;height:100px;background:#0f172a;display:flex;justify-content:space-around;align-items:center;padding:10px;z-index:6;border-top:2px solid #1e293b}.control-btn{width:45%;height:70px;background:linear-gradient(to bottom,#1e293b,#0f172a);color:#94a3b8;border:1px solid #334155;border-radius:16px;font-size:22px;font-weight:700;cursor:pointer;display:flex;justify-content:center;align-items:center;box-shadow:0 6px 12px rgba(0,0,0,.5);touch-action:manipulation;transition:.1s ease}.control-btn:active{background:linear-gradient(to bottom,#3b82f6,#1d4ed8);color:#fff;border-color:#60a5fa;transform:scale(.96);box-shadow:0 0 15px rgba(59,130,246,.6)}.overlay-screen{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,.95);backdrop-filter:blur(12px);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;z-index:10;text-align:center;padding:30px}.overlay-screen h1{font-size:3.6rem;font-weight:900;background:linear-gradient(to right,#ef4444,#f59e0b,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:4px;margin-bottom:10px;animation:textGlowGL 2s ease infinite}@keyframes textGlowGL{0%,100%{filter:drop-shadow(0 0 10px rgba(59,130,246,.3))}50%{filter:drop-shadow(0 0 25px rgba(239,68,68,.6))}}.overlay-screen p{font-size:1.1rem;margin-bottom:35px;color:#64748b;max-width:80%;line-height:1.5}.start-btn{padding:16px 45px;font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;background:linear-gradient(to right,#3b82f6,#1d4ed8);color:#fff;border:none;border-radius:35px;cursor:pointer;box-shadow:0 10px 25px rgba(29,78,216,.4);transition:.3s cubic-bezier(.175,.885,.32,1.275)}.start-btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 15px 30px rgba(29,78,216,.6)}.hide{display:none!important}
+    </style>
+</head>
+<body>
+
+    <div class="game-container" id="gameViewport">
+        <!-- Dashboard Display -->
+        <div class="dashboard">
+            <div>Score</div>
+            <span id="score">0</span>
+        </div>
+
+        <!-- Start / Game Over Screen -->
+        <div class="overlay-screen" id="menuScreen">
+            <h1 id="menuTitle">TURBO RACER</h1>
+            <p id="menuInstructions">Steer using Left/Right Arrows, A/D keys, or the High-Performance Screen Buttons below.</p>
+            <button class="start-btn" id="startBtn">START ENGINE</button>
+        </div>
+
+        <!-- Player Asset -->
+        <div class="car" id="playerCar">
+            <div class="car-light-right"></div>
+        </div>
+    </div>
+
+    <!-- On-Screen Controls Dashboard -->
+    <div class="controls-container">
+        <button class="control-btn" id="leftBtn" aria-label="Steer Left">◀ STEER LEFT</button>
+        <button class="control-btn" id="rightBtn" aria-label="Steer Right">STEER RIGHT ▶</button>
+    </div>
+
+    <script>
+        const container = document.getElementById('gameViewport');
+        const playerCar = document.getElementById('playerCar');
+        const scoreDisplay = document.getElementById('score');
+        const menuScreen = document.getElementById('menuScreen');
+        const startBtn = document.getElementById('startBtn');
+        const menuTitle = document.getElementById('menuTitle');
+        const menuInstructions = document.getElementById('menuInstructions');
+       
+        const leftBtn = document.getElementById('leftBtn');
+        const rightBtn = document.getElementById('rightBtn');
+
+        let keys = { ArrowLeft: false, ArrowRight: false, KeyA: false, KeyD: false };
+        let touchControls = { left: false, right: false };
+        let gameSettings = { speed: 4, roadSpeed: 7, score: 0, isActive: false };
+        let enemyPalette = ['#3b82f6', '#f59e0b', '#10b981', '#a855f7', '#06b6d4', '#ec4899'];
+
+        // Framerate smoothing time anchor tracking
+        let lastTime = 0;
+
+        // Web Audio Synthesizer Engine Architecture
+        let audioCtx = null;
+        let engineOscillator = null;
+        let engineGain = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function startEngineSound() {
+            initAudio();
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+           
+            engineOscillator = audioCtx.createOscillator();
+            engineGain = audioCtx.createGain();
+           
+            engineOscillator.type = 'sawtooth';
+            engineOscillator.frequency.setValueAtTime(50, audioCtx.currentTime);
+           
+            let filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(180, audioCtx.currentTime);
+
+            engineGain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+
+            engineOscillator.connect(filter);
+            filter.connect(engineGain);
+            engineGain.connect(audioCtx.destination);
+            engineOscillator.start();
+        }
+
+        function updateEnginePitch(score) {
+            if (engineOscillator && audioCtx) {
+                let targetFreq = 50 + Math.min(score * 0.4, 110);
+                engineOscillator.frequency.setTargetAtTime(targetFreq, audioCtx.currentTime, 0.15);
+            }
+        }
+
+        function stopEngineSound() {
+            if (engineOscillator) {
+                try {
+                    engineOscillator.stop();
+                    engineOscillator.disconnect();
+                } catch(e) {}
+                engineOscillator = null;
+            }
+        }
+
+        function playCrashSound() {
+            initAudio();
+            let osc = audioCtx.createOscillator();
+            let gain = audioCtx.createGain();
+           
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(140, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(10, audioCtx.currentTime + 0.45);
+           
+            gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+           
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.45);
+        }
+
+        function playScoreSound() {
+            initAudio();
+            let osc = audioCtx.createOscillator();
+            let gain = audioCtx.createGain();
+           
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+           
+            gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.08);
+           
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.08);
+        }
+
+        // Action Mapping Events Setup
+        document.addEventListener('keydown', (e) => { if (e.code in keys) keys[e.code] = true; });
+        document.addEventListener('keyup', (e) => { if (e.code in keys) keys[e.code] = false; });
+
+        leftBtn.addEventListener('mousedown', () => touchControls.left = true);
+        leftBtn.addEventListener('mouseup', () => touchControls.left = false);
+        leftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); touchControls.left = true; });
+        leftBtn.addEventListener('touchend', () => touchControls.left = false);
+
+        rightBtn.addEventListener('mousedown', () => touchControls.right = true);
+        rightBtn.addEventListener('mouseup', () => touchControls.right = false);
+        rightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); touchControls.right = true; });
+        rightBtn.addEventListener('touchend', () => touchControls.right = false);
+
+        startBtn.addEventListener('click', initGame);
+
+        function initGame() {
+            menuScreen.classList.add('hide');
+            container.classList.remove('shake-screen');
+           
+            container.querySelectorAll('.line').forEach(el => el.remove());
+            container.querySelectorAll('.enemy').forEach(el => el.remove());
+            container.querySelectorAll('.speed-line').forEach(el => el.remove());
+
+            gameSettings.isActive = true;
+            gameSettings.score = 0;
+            // START SLOW
+            gameSettings.speed = 4.5;
+            gameSettings.roadSpeed = 7.5;
+           
+            scoreDisplay.innerText = gameSettings.score;
+            playerCar.style.left = "195px";
+            playerCar.className = "car";
+
+            startEngineSound();
+
+            // Build Road Markings
+            for (let i = 0; i < 5; i++) {
+                let line = document.createElement('div');
+                line.className = 'line';
+                line.style.top = (i * 160) - 40 + "px";
+                container.appendChild(line);
+            }
+
+            // Build Motion Speed Lines
+            for (let i = 0; i < 6; i++) {
+                let speedLine = document.createElement('div');
+                speedLine.className = 'speed-line';
+                speedLine.style.top = Math.random() * window.innerHeight + "px";
+                speedLine.style.left = Math.random() * 370 + 40 + "px";
+                container.appendChild(speedLine);
+            }
+
+            // Spawn Initial Enemy Cars
+            for (let i = 0; i < 3; i++) {
+                let enemy = document.createElement('div');
+                enemy.className = 'enemy';
+                let secondaryLight = document.createElement('div');
+                secondaryLight.className = 'enemy-light-right';
+                enemy.appendChild(secondaryLight);
+
+                enemy.style.top = ((i + 1) * -320) + "px";
+                enemy.style.left = Math.floor(Math.random() * 310) + 40 + "px";
+                enemy.style.backgroundColor = enemyPalette[Math.floor(Math.random() * enemyPalette.length)];
+                container.appendChild(enemy);
+            }
+
+            lastTime = performance.now();
+            window.requestAnimationFrame(updateFrame);
+        }
+
+        // Bounding Box Logic Matrix Collision Check
+        function detectCollision(objectA, objectB) {
+            let rectA = objectA.getBoundingClientRect();
+            let rectB = objectB.getBoundingClientRect();
+
+            return !(
+                ((rectA.top + 8) > rectB.bottom) ||
+                ((rectA.bottom - 8) < rectB.top) ||
+                ((rectA.right - 6) < rectB.left) ||
+                ((rectA.left + 6) > rectB.right)
+            );
+        }
+
+        function createExhaustParticle() {
+            let carRect = playerCar.getBoundingClientRect();
+            let containerRect = container.getBoundingClientRect();
+           
+            let particle = document.createElement('div');
+            particle.className = 'exhaust-particle';
+           
+            let leftPosition = carRect.left - containerRect.left + 22;
+            let topPosition = carRect.bottom - containerRect.top - 8;
+           
+            particle.style.left = leftPosition + 'px';
+            particle.style.top = topPosition + 'px';
+           
+            container.appendChild(particle);
+            setTimeout(() => { particle.remove(); }, 350);
+        }
+
+        function animateEnvironment(modifier) {
+            let lines = document.querySelectorAll('.line');
+            lines.forEach((line) => {
+                let topPos = parseFloat(line.style.top);
+                if (topPos >= window.innerHeight) { topPos = -120; }
+                line.style.top = (topPos + (gameSettings.roadSpeed * modifier)) + "px";
+            });
+
+            let speedLines = document.querySelectorAll('.speed-line');
+            speedLines.forEach((sLine) => {
+                let topPos = parseFloat(sLine.style.top);
+                if (topPos >= window.innerHeight) {
+                    topPos = -60;
+                    sLine.style.left = Math.random() * 370 + 40 + "px";
+                }
+                sLine.style.top = (topPos + (gameSettings.roadSpeed * 1.6 * modifier)) + "px";
+            });
+
+            // Exhaust flame probability increases as car goes faster
+            let exhaustChance = 0.15 + (gameSettings.speed / 40);
+            if (Math.random() < exhaustChance) {
+                createExhaustParticle();
+            }
+        }
+
+        function handleTraffic(carElement, modifier) {
+            let enemies = document.querySelectorAll('.enemy');
+            enemies.forEach((enemy) => {
+                if (detectCollision(carElement, enemy)) {
+                    triggerGameOver();
+                }
+
+                let topPos = parseFloat(enemy.style.top);
+                if (topPos >= window.innerHeight) {
+                    topPos = -340;
+                    enemy.style.left = Math.floor(Math.random() * 310) + 40 + "px";
+                    enemy.style.backgroundColor = enemyPalette[Math.floor(Math.random() * enemyPalette.length)];
+                    gameSettings.score += 10;
+                   
+                    // GRADUAL SPEED ACCELERATION SYSTEM
+                    if (gameSettings.speed < 15) {
+                        gameSettings.speed += 0.35;
+                        gameSettings.roadSpeed += 0.55;
+                    }
+
+                    scoreDisplay.innerText = gameSettings.score;
+                    scoreDisplay.classList.remove('pulse-score');
+                    void scoreDisplay.offsetWidth;
+                    scoreDisplay.classList.add('pulse-score');
+
+                    playScoreSound();
+                    updateEnginePitch(gameSettings.score);
+                }
+                enemy.style.top = (topPos + (gameSettings.speed * modifier)) + "px";
+            });
+        }
+
+        function updateFrame(currentTime) {
+            if (gameSettings.isActive) {
+                let delta = currentTime - lastTime;
+                if (delta > 100) delta = 16.66; // Fallback anchor protection
+                lastTime = currentTime;
+
+                let modifier = delta / 16.66;
+
+                animateEnvironment(modifier);
+                handleTraffic(playerCar, modifier);
+
+                let currentLeft = parseFloat(window.getComputedStyle(playerCar).left);
+
+                if ((keys.ArrowLeft || keys.KeyA || touchControls.left) && currentLeft > 40) {
+                    playerCar.style.left = (currentLeft - (gameSettings.speed * modifier)) + "px";
+                    playerCar.classList.add('tilt-left');
+                    playerCar.classList.remove('tilt-right');
+                } else if ((keys.ArrowRight || keys.KeyD || touchControls.right) && currentLeft < 355) {
+                    playerCar.style.left = (currentLeft + (gameSettings.speed * modifier)) + "px";
+                    playerCar.classList.add('tilt-right');
+                    playerCar.classList.remove('tilt-left');
+                } else {
+                    playerCar.classList.remove('tilt-left', 'tilt-right');
+                }
+
+                window.requestAnimationFrame(updateFrame);
+            }
+        }
+
+        function triggerGameOver() {
+            gameSettings.isActive = false;
+            touchControls.left = false;
+            touchControls.right = false;
+           
+            stopEngineSound();
+            playCrashSound();
+
+            container.classList.add('shake-screen');
+
+            menuTitle.innerText = "CRASH DETECTED";
+            menuInstructions.innerHTML = `Total Score Accumulated: <b style="color: #38bdf8; font-size: 26px;">${gameSettings.score}</b>`;
+            startBtn.innerText = "RESTART DRIVE";
+            menuScreen.classList.remove('hide');
+        }
+    </script>
+</body>
+</html>
